@@ -1,0 +1,23 @@
+.Footer {
+  margin-bottom: 50px;
+}
+.Footer .top {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.Footer .top .item {
+  flex: 1;
+  min-width: 250px;
+}
+.bottom .right {
+  margin-top: 30px;
+}
+
+.Footer .bottom .left {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
