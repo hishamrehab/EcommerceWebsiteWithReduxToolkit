@@ -1,7 +1,7 @@
 import { createContext, useState, useMemo } from "react";
 import { createTheme } from "@mui/material/styles";
 import { grey } from "@mui/material/colors";
-
+import React from "react";
 export const getDesignTokens = (mode) => ({
   palette: {
     mode,
@@ -11,14 +11,13 @@ export const getDesignTokens = (mode) => ({
           text: {
             primary: "#2B3445",
           },
-        myColor: {
-          main: "#F6F9FC"
-        },
+          myColor: {
+            main: "#F6F9FC",
+          },
 
-        bg: {
-          main: "#F6F6F6"
-        },
-
+          bg: {
+            main: "#F6F6F6",
+          },
 
           neutral: {
             main: "#64748B",
@@ -35,7 +34,7 @@ export const getDesignTokens = (mode) => ({
           },
 
           myColor: {
-            main: "#252b32"
+            main: "#252b32",
           },
 
           bg: {
@@ -54,7 +53,8 @@ export const getDesignTokens = (mode) => ({
 });
 
 // context for color mode
-export const ColorModeContext = createContext({
+
+export const ColorModeContext = React.createContext({
   toggleColorMode: () => {},
 });
 

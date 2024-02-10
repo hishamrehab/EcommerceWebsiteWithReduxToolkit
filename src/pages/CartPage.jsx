@@ -58,13 +58,6 @@ export default function Cart() {
               </button>
             )}
           </ul>
-          <div className="home-page">
-            <div className="homepage-bottom">
-              <Link to="/" className="homePage-link">
-                Home page
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </>

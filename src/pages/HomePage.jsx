@@ -1,15 +1,15 @@
 import React from "react";
 import Products from "../components/3-main/Products";
-import Slider from "../components/slider/Slider";
-import Header1 from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import Slider from "../components/2-slider/Slider";
+import MainNavbar from "../components/1-Navbar/MainNavbar";
+
 const HomePage = () => {
   return (
     <div>
-      <Header1 />
+      <MainNavbar />
+
       <Slider />
       <Products />
-      <Footer />
     </div>
   );
 };

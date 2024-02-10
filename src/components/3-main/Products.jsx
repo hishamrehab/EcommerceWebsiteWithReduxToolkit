@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Product from "./Product";
-import { Box, Button, Stack, Typography } from "@mui/material";
-import { ToggleButtonGroup } from "@mui/material";
+import { Box,  Stack } from "@mui/material";
+
 import { useTheme } from "@emotion/react";
 
 const Products = () => {
@@ -19,39 +19,46 @@ const Products = () => {
   }, []);
   return (
     <>
-      <h1
-        component="div"
+      <div
         style={{
-          marginTop: "30px",
-          marginButton: "25px",
-          textAlign: "center",
-              fontSize:"50px"
+          marginBottom: "35px",
+          paddingBottom:"25px"
         }}
       >
-        Our Products
-      </h1>
-
-      <Box sx={{ marginTop: "50px" }}>
-        {products.length > 0 ? (
-          <Stack
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-            }}
-          >
-            {products.map((product) => (
-              <Box key={product.id}>
-                <>
-                  <Product product={product} showButton={true} />
-                </>
-              </Box>
-            ))}
-          </Stack>
-        ) : (
-          <h1>Loading...</h1>
-        )}
-      </Box>
+        <h1
+          component="div"
+          style={{
+            marginTop: "30px",
+            marginButton: "25px",
+            textAlign: "center",
+            fontSize: "40px",
+          }}
+        >
+          Our Products
+        </h1>
+        <hr />
+        <Box sx={{ marginTop: "50px" }}>
+          {products.length > 0 ? (
+            <Stack
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+              }}
+            >
+              {products.map((product) => (
+                <Box key={product.id}>
+                  <>
+                    <Product product={product} showButton={true} />
+                  </>
+                </Box>
+              ))}
+            </Stack>
+          ) : (
+            <h1>Loading...</h1>
+          )}
+        </Box>
+      </div>
     </>
   );
 };
