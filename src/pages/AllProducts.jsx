@@ -17,12 +17,11 @@ import Rating from "@mui/material/Rating";
 import { Container } from "react-bootstrap";
 //  import { useDispatch } from "react-redux";
 
-
-const JeweleryPage = () => {
+const AllProducts = () => {
   const theme = useTheme();
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [products, setProducts] = useState([]);
-  const apiUrl_Jewelery = "https://fakestoreapi.com/products/category/jewelery";
+  const apiUrl_Jewelery = "https://fakestoreapi.com/products";
 
   useEffect(() => {
     fetch(apiUrl_Jewelery).then((res) => {
@@ -43,7 +42,7 @@ const JeweleryPage = () => {
           fontSize: "50px",
         }}
       >
-        Jewelery 
+        All Products
       </h1>
       <Container>
         <Box sx={{ marginTop: "50px" }}>
@@ -53,7 +52,7 @@ const JeweleryPage = () => {
                 display: "flex",
                 flexDirection: "row",
                 flexWrap: "wrap",
-                justifyContent:"space-around"
+                justifyContent: "space-around",
               }}
             >
               {products.map((product) => (
@@ -173,4 +172,4 @@ const JeweleryPage = () => {
   );
 };
 
-export default JeweleryPage;
+export default AllProducts;

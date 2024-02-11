@@ -15,9 +15,11 @@ export default function Cart() {
   const theme = useTheme();
   return (
     <>
-      <div className="container">
+      <div className="container " style={{
+        marginBottom :"80px"
+      }}>
         <div className="cart d-flex space-between ">
-          <p className="cart-title">Cart Page</p>
+          <p className="cart-title">Cart</p>
         </div>
         <div className="container">
           <ul className="cart-list">

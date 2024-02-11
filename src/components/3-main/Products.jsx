@@ -1,9 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Product from "./Product";
-import { Box,  Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 
 import { useTheme } from "@emotion/react";
+import { Container } from "react-bootstrap";
+
 
 const Products = () => {
   const theme = useTheme();
@@ -19,11 +21,11 @@ const Products = () => {
   }, []);
   return (
     <>
-      <div
-        style={{
-          marginBottom: "35px",
-          paddingBottom:"25px"
-        }}
+      <Container
+        // style={{
+        //   marginBottom: "35px",
+        //   paddingBottom: "25px",
+        // }}
       >
         <h1
           component="div"
@@ -32,6 +34,7 @@ const Products = () => {
             marginButton: "25px",
             textAlign: "center",
             fontSize: "40px",
+            gap:"30px"
           }}
         >
           Our Products
@@ -47,7 +50,17 @@ const Products = () => {
               }}
             >
               {products.map((product) => (
-                <Box key={product.id}>
+                <Box
+                  key={product.id}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    gap: "15px",
+                    justifyItems: "flex-start",
+                  }}
+                >
                   <>
                     <Product product={product} showButton={true} />
                   </>
@@ -58,7 +71,7 @@ const Products = () => {
             <h1>Loading...</h1>
           )}
         </Box>
-      </div>
+      </Container>
     </>
   );
 };

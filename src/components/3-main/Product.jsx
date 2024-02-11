@@ -1,4 +1,5 @@
-import * as React from "react";
+import React from "react";
+import { useState } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -10,19 +11,14 @@ import { addToCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
-
+// import ProductDetail from "./ProductDetail";
 export const Product = ({ product, showButton }) => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(2);
 
   const dispatch = useDispatch();
 
-
   return (
-    <Container
-      sx={{
-        width: "290px",
-      }}
-    >
+    <Container>
       <Stack>
         <Card
           sx={{
@@ -86,24 +82,21 @@ export const Product = ({ product, showButton }) => {
 
             <Typography variant="body2" color="text.secondary">
               <Rating
-                sx={{
-                  marginTop: "10px",
-                }}
                 name="simple-controlled"
                 value={product.rating.rate}
                 onChange={(event, newValue) => {
-                  setValue(value);
+                  setValue(newValue);
                 }}
-                readOnly
               />
             </Typography>
           </CardContent>
 
-          <CardActions>
+          <CardActions
+            sx={{
+              marginBottom: "10px",
+            }}
+          >
             <Button
-              sx={{
-                marginBottom: "20px",
-              }}
               size="small"
               onClick={() =>
                 dispatch(
@@ -114,13 +107,14 @@ export const Product = ({ product, showButton }) => {
                     price: product.price,
                     description: product.description,
                     image: product.image,
-                    // rating: product.rating.rate,
+                    rating: product.rating.rate,
                   })
                 )
               }
             >
               Add TO Cart
             </Button>
+            {showButton && <Link to={`/product/${product.id}`}>Details</Link>}
           </CardActions>
         </Card>
       </Stack>
