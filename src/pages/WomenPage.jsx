@@ -16,10 +16,10 @@ import { Container } from "react-bootstrap";
 const WomenPage = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
-
+  const showButton = true;
   const [products, setProducts] = useState([]);
   const apiUrl_Women =
-    "https://fakestoreapi.com/products/category/women's clothing";
+    "https://fakestoreapi.com/products/category/women's%20clothing";
 
   useEffect(() => {
     fetch(apiUrl_Women).then((res) => {
@@ -51,7 +51,8 @@ const WomenPage = () => {
                   display: "flex",
                   flexDirection: "row",
                   flexWrap: "wrap",
-                  justifyContent: "space-around",
+                  justifyContent: "space-between",
+                  gap: "20px",
                 }}
               >
                 {products.map((product) => (
@@ -135,10 +136,18 @@ const WomenPage = () => {
                         </Typography>
                       </CardContent>
 
-                      <CardActions>
+                      <CardActions
+                        sx={{
+                          marginBottom: "10px",
+                          display: "flex",
+                          alignItems: "baseline",
+                        }}
+                      >
                         <Button
                           sx={{
-                            marginBottom: "20px",
+                            marginBottom: "10px",
+                            display: "flex",
+                            alignItems: "baseline",
                           }}
                           size="small"
                           onClick={() =>
@@ -150,12 +159,26 @@ const WomenPage = () => {
                                 price: product.price,
                                 description: product.description,
                                 image: product.image,
-                                // rating: product.rating.rate,
+                                rating: product.rating.rate,
                               })
                             )
                           }
                         >
                           Add TO Cart
+                        </Button>
+                        <Button>
+                          {showButton && (
+                            <Link
+                              style={{
+                                textDecoration: "none",
+                                fontSize: "18px",
+                                marginLeft: "30px",
+                              }}
+                              to={`/product/${product.id}`}
+                            >
+                              Details
+                            </Link>
+                          )}
                         </Button>
                       </CardActions>
                     </Card>

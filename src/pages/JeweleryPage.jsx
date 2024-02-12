@@ -17,10 +17,10 @@ import Rating from "@mui/material/Rating";
 import { Container } from "react-bootstrap";
 //  import { useDispatch } from "react-redux";
 
-
 const JeweleryPage = () => {
   const theme = useTheme();
-    const dispatch = useDispatch();
+  const showButton = true;
+  const dispatch = useDispatch();
   const [products, setProducts] = useState([]);
   const apiUrl_Jewelery = "https://fakestoreapi.com/products/category/jewelery";
 
@@ -43,7 +43,7 @@ const JeweleryPage = () => {
           fontSize: "50px",
         }}
       >
-        Jewelery 
+        Jewelery
       </h1>
       <Container>
         <Box sx={{ marginTop: "50px" }}>
@@ -53,7 +53,7 @@ const JeweleryPage = () => {
                 display: "flex",
                 flexDirection: "row",
                 flexWrap: "wrap",
-                justifyContent:"space-around"
+                justifyContent: "space-around",
               }}
             >
               {products.map((product) => (
@@ -140,7 +140,9 @@ const JeweleryPage = () => {
                     <CardActions>
                       <Button
                         sx={{
-                          marginBottom: "20px",
+                          marginBottom: "10px",
+                          display: "flex",
+                          alignItems: "baseline",
                         }}
                         size="small"
                         onClick={() =>
@@ -158,6 +160,20 @@ const JeweleryPage = () => {
                         }
                       >
                         Add TO Cart
+                      </Button>
+                      <Button>
+                        {showButton && (
+                          <Link
+                            style={{
+                              textDecoration: "none",
+                              fontSize: "18px",
+                              marginLeft: "30px",
+                            }}
+                            to={`/product/${product.id}`}
+                          >
+                            Details
+                          </Link>
+                        )}
                       </Button>
                     </CardActions>
                   </Card>

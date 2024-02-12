@@ -11,11 +11,11 @@ import ElectronicsPage from "./pages/ElectronicsPage";
 import Menpage from "./pages/Menpage";
 import WomenPage from "./pages/WomenPage";
 import Footer from "./components/4-Footer/Footer";
-import SecondNavbar from "./components/1-Navbar/SecondNavbar";
+import SecondNavbar from "./components/1-Navbar/Navbar";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import ProductDetail from "./components/3-main/ProductDetail";
 import AllProducts from "./pages/AllProducts";
-function App({ showButton, product }) {
+function App() {
   const [theme, colorMode] = useMode();
 
   return (
@@ -27,22 +27,19 @@ function App({ showButton, product }) {
           <BrowserRouter>
             <SecondNavbar />
             <Routes>
-              <Route
-                path="/"
-                element={<HomePage showButton={showButton} product={product} />}
-              />
+              <Route path="/" element={<HomePage />} />
               <Route path="/products" element={<AllProducts />} />
               <Route
                 path="/jewelery"
-                element={<JeweleryPage showButton={showButton} />}
+                element={<JeweleryPage  />}
               />
               <Route
                 path="/electronics"
-                element={<ElectronicsPage showButton={showButton} />}
+                element={<ElectronicsPage />}
               />
               <Route path="/cart" element={<Cart />} />
               <Route path="/men" element={<Menpage />} />
-              <Route path="/women" element={<Menpage />} />
+              <Route path="/women" element={<WomenPage />} />
               <Route path="/product/:productId" element={<ProductDetail />} />
             </Routes>
             <Footer />

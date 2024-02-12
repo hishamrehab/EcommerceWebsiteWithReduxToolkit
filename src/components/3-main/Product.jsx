@@ -23,9 +23,10 @@ export const Product = ({ product, showButton }) => {
         <Card
           sx={{
             boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
-            marginBottom: "40px",
-            width: "310px",
+            marginRight: "20px",
+            maxWidth: "310px",
             height: "auto",
+            marginBottom: "50px",
           }}
         >
           <CardContent>
@@ -94,6 +95,8 @@ export const Product = ({ product, showButton }) => {
           <CardActions
             sx={{
               marginBottom: "10px",
+              display: "flex",
+              alignItems: "baseline",
             }}
           >
             <Button
@@ -114,7 +117,20 @@ export const Product = ({ product, showButton }) => {
             >
               Add TO Cart
             </Button>
-            {showButton && <Link to={`/product/${product.id}`}>Details</Link>}
+            <Button>
+              {showButton && (
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    fontSize: "18px",
+                    marginLeft: "30px",
+                  }}
+                  to={`/product/${product.id}`}
+                >
+                  Details
+                </Link>
+              )}
+            </Button>
           </CardActions>
         </Card>
       </Stack>

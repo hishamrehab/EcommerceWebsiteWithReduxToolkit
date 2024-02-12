@@ -23,6 +23,8 @@ const AllProducts = () => {
   const [products, setProducts] = useState([]);
   const apiUrl_Jewelery = "https://fakestoreapi.com/products";
 
+  const showButton = true;
+
   useEffect(() => {
     fetch(apiUrl_Jewelery).then((res) => {
       res.json().then((data) => {
@@ -32,7 +34,7 @@ const AllProducts = () => {
   }, []);
 
   return (
-    <>
+    <Container>
       <h1
         component="div"
         style={{
@@ -136,7 +138,13 @@ const AllProducts = () => {
                       </Typography>
                     </CardContent>
 
-                    <CardActions>
+                    <CardActions
+                      sx={{
+                        marginBottom: "10px",
+                        display: "flex",
+                        alignItems: "baseline",
+                      }}
+                    >
                       <Button
                         sx={{
                           marginBottom: "20px",
@@ -158,6 +166,20 @@ const AllProducts = () => {
                       >
                         Add TO Cart
                       </Button>
+                      <Button>
+                        {showButton && (
+                          <Link
+                            style={{
+                              textDecoration: "none",
+                              fontSize: "18px",
+                              marginLeft: "30px",
+                            }}
+                            to={`/product/${product.id}`}
+                          >
+                            Details
+                          </Link>
+                        )}
+                      </Button>
                     </CardActions>
                   </Card>
                 </Stack>
@@ -168,7 +190,7 @@ const AllProducts = () => {
           )}
         </Box>
       </Container>
-    </>
+    </Container>
   );
 };
 

@@ -24,7 +24,7 @@ import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useSelector } from "react-redux";
 
-function SecondNavbar() {
+function Navbar() {
   const theme = useTheme();
 
   const products = useSelector((state) => state.cart.products);
@@ -210,7 +210,7 @@ function SecondNavbar() {
                   All Product
                 </Link>
                 <Link
-                  to="electronics"
+                  to="/electronics"
                   className="text-light"
                   style={{
                     fontSize: "1.1em",
@@ -222,7 +222,7 @@ function SecondNavbar() {
                   jewelery
                 </Link>
                 <Link
-                  to="men"
+                  to="/men"
                   className="text-light"
                   style={{
                     fontSize: "1.1em",
@@ -230,8 +230,9 @@ function SecondNavbar() {
                 >
                   men's clothing
                 </Link>
+              
                 <Link
-                  to="women"
+                  to="/women"
                   className="text-light"
                   style={{
                     fontSize: "1em",
@@ -347,4 +348,4 @@ function SecondNavbar() {
     </AppBar>
   );
 }
-export default SecondNavbar;
+export default Navbar;

@@ -15,9 +15,12 @@ export default function Cart() {
   const theme = useTheme();
   return (
     <>
-      <div className="container " style={{
-        marginBottom :"80px"
-      }}>
+      <div
+        className="container "
+        style={{
+          marginBottom: "80px",
+        }}
+      >
         <div className="cart d-flex space-between ">
           <p className="cart-title">Cart</p>
         </div>
@@ -27,7 +30,12 @@ export default function Cart() {
               products.map((item) => {
                 return (
                   <li className="cart-item" key={item.id}>
-                    <img src={item.image} alt="" className="cart-item-image" />
+                    <img
+                      src={item.image}
+                      alt=""
+                      width="100%"
+                      height={"350px"}
+                    />
                     <span className="cart-item-title">{item.title}</span>
                     <span className="cart-item-price">{item.price}$</span>
                     <button
@@ -56,7 +64,16 @@ export default function Cart() {
                   marginTop: "20px",
                 }}
               >
-                <span className="clearAll">clear all</span> <ClearIcon />
+                <span
+                  className="clearAll"
+                  style={{
+                    marginBottom: "20px",
+                    marginRight:"20px"
+                  }}
+                >
+                  clear all
+                </span>{" "}
+                <ClearIcon />
               </button>
             )}
           </ul>

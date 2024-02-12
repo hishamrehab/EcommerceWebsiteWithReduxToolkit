@@ -20,6 +20,7 @@ const ElectronicsPage = () => {
   const dispatch = useDispatch();
 
   const theme = useTheme();
+  const showButton = true;
   const [products, setProducts] = useState([]);
   const apiUrl_Electronics =
     "https://fakestoreapi.com/products/category/electronics";
@@ -137,11 +138,14 @@ const ElectronicsPage = () => {
                       </Typography>
                     </CardContent>
 
-                    <CardActions>
+                    <CardActions
+                      sx={{
+                        marginBottom: "10px",
+                        display: "flex",
+                        alignItems: "baseline",
+                      }}
+                    >
                       <Button
-                        sx={{
-                          marginBottom: "20px",
-                        }}
                         size="small"
                         onClick={() =>
                           dispatch(
@@ -158,6 +162,20 @@ const ElectronicsPage = () => {
                         }
                       >
                         Add TO Cart
+                      </Button>
+                      <Button>
+                        {showButton && (
+                          <Link
+                            style={{
+                              textDecoration: "none",
+                              fontSize: "18px",
+                              marginLeft: "30px",
+                            }}
+                            to={`/product/${product.id}`}
+                          >
+                            Details
+                          </Link>
+                        )}
                       </Button>
                     </CardActions>
                   </Card>
