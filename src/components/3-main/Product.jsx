@@ -11,7 +11,7 @@ import { addToCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
-// import ProductDetail from "./ProductDetail";
+
 export const Product = ({ product, showButton }) => {
   const [value, setValue] = useState(2);
 

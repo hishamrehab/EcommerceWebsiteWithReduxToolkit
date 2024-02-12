@@ -45,7 +45,6 @@ function Products() {
       >
         <Box
           sx={{
-            display: "inline-block",
             gap: "50px",
             minWidth: "25px",
             display: "flex",

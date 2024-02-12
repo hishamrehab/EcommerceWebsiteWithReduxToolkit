@@ -156,7 +156,7 @@ const ElectronicsPage = () => {
                               price: product.price,
                               description: product.description,
                               image: product.image,
-                              // rating: product.rating.rate,
+                               rating: product.rating.rate,
                             })
                           )
                         }
