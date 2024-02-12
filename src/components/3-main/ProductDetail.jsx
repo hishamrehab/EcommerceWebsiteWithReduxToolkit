@@ -43,8 +43,13 @@ const ProductDetail = () => {
           }}
         >
           <CardContent>
-            <Box marginLeft={"20%"} marginTop={"25px"}>
-              <img src={product.image} width="100%" height={"350px"} />
+            <Box
+              marginLeft={"10%"}
+              marginTop={"25px"}
+              paddingRight={"70px"}
+              marginBottom={"20px"}
+            >
+              <img src={product.image} width="100%" height={"440px"} />
             </Box>
 
             <Typography
@@ -79,8 +84,8 @@ const ProductDetail = () => {
                 marginTop: "15px",
               }}
             >
-              {product.description}
-            </Typography>
+            {product.description}
+            </Typography> 
 
             <Typography
               variant="body2"

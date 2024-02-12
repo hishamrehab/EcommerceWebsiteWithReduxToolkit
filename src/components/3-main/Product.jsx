@@ -27,6 +27,7 @@ export const Product = ({ product, showButton }) => {
             maxWidth: "310px",
             height: "auto",
             marginBottom: "50px",
+            paddingBottom:"20px"
           }}
         >
           <CardContent>
@@ -43,7 +44,7 @@ export const Product = ({ product, showButton }) => {
                 marginBottom: "15px",
               }}
             >
-              {product.title}
+              {product.title.slice(0, 50)}
             </Typography>
 
             <Typography
@@ -66,7 +67,7 @@ export const Product = ({ product, showButton }) => {
                 marginTop: "15px",
               }}
             >
-              {product.description}
+              {product.description.slice(0, 150)}
             </Typography>
 
             <Typography
@@ -83,11 +84,15 @@ export const Product = ({ product, showButton }) => {
 
             <Typography variant="body2" color="text.secondary">
               <Rating
+              sx={{
+                paddingTop:"15px"
+              }}
                 name="simple-controlled"
                 value={product.rating.rate}
                 onChange={(event, newValue) => {
                   setValue(newValue);
                 }}
+                readOnly
               />
             </Typography>
           </CardContent>

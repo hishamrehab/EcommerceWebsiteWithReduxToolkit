@@ -61,9 +61,11 @@ const JeweleryPage = () => {
                   <Card
                     sx={{
                       boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
-                      marginBottom: "40px",
-                      width: "310px",
+                      marginRight: "20px",
+                      maxWidth: "310px",
                       height: "auto",
+                      marginBottom: "50px",
+                      paddingBottom: "20px",
                     }}
                   >
                     <CardContent>
@@ -84,7 +86,7 @@ const JeweleryPage = () => {
                           marginBottom: "15px",
                         }}
                       >
-                        {product.title}
+                        {product.title.slice(0, 50)}
                       </Typography>
 
                       <Typography
@@ -107,7 +109,7 @@ const JeweleryPage = () => {
                           marginTop: "15px",
                         }}
                       >
-                        {product.description}
+                        {product.description.slice(0, 150)}
                       </Typography>
 
                       <Typography
@@ -125,7 +127,7 @@ const JeweleryPage = () => {
                       <Typography variant="body2" color="text.secondary">
                         <Rating
                           sx={{
-                            marginTop: "10px",
+                            marginTop: "15px",
                           }}
                           name="simple-controlled"
                           value={product.rating.rate}
