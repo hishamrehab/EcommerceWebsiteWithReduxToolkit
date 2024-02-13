@@ -57,146 +57,86 @@ function Navbar() {
         bgcolor: "tomato",
       }}
     >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Link
-            to="/"
-            style={{
-              textDecoration: "none",
+      <Toolbar>
+        <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+          }}
+        >
+          <Box
+            sx={{
+              alignItems: "center",
+              borderRadius: "12px",
+              fontSize: "12px",
+              fontWeight: "bold",
             }}
+            variant="body2"
           >
-            <Box
+            <img
+              src="https://authorize.chec.io/images/chec.logo.dark.png"
+              width={"120px"}
+              height={"40px"}
+            />
+
+            <Typography
               sx={{
-                mr: 2,
-                p: "4px 10px",
-                alignItems: "center",
-                borderRadius: "12px",
-                fontSize: "12px",
+                color: "#474F7A",
                 fontWeight: "bold",
-              }}
-              variant="body2"
-            >
-              <img
-                src="https://authorize.chec.io/images/chec.logo.dark.png"
-                width={"120px"}
-                height={"40px"}
-              />
-
-              <Typography
-                sx={{
-                  color: "#474F7A",
-                  fontWeight: "bold",
-                  fontSize: "20px",
-                  display: "block",
-                }}
-              >
-                Ecommerce
-              </Typography>
-            </Box>
-          </Link>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "flex", md: "none" },
-            }}
-          >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-            >
-              <MenuIcon
-                sx={{
-                  fontSize: "30px",
-                }}
-              />
-            </IconButton>
-
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
+                fontSize: "20px",
+                display: "block",
+                marginLeft: "5px",
               }}
             >
-              <MenuItem
-                onClick={handleCloseNavMenu}
-                sx={{
-                  backgroundColor: "#8CB9BD",
-                  color: "black",
-                }}
-              >
-                <Nav className="me-auto ">
-                  <Link
-                    to="/electronics"
-                    className="text-light"
-                    style={{
-                      fontSize: "1.1em",
-                    }}
-                  >
-                    electronics
-                  </Link>
-                  <Link
-                    to="jewelery"
-                    className="text-light"
-                    style={{
-                      fontSize: "1.1em",
-                    }}
-                  >
-                    jewelery
-                  </Link>
-                  <Link
-                    to="men"
-                    className="text-light"
-                    style={{
-                      fontSize: "1.1em",
-                    }}
-                  >
-                    men's clothing
-                  </Link>
-                  <Link
-                    to="women"
-                    className="text-light"
-                    style={{
-                      fontSize: "1em",
-                      color: "red",
-                    }}
-                  >
-                    women's clothing
-                  </Link>
-                </Nav>
-              </MenuItem>
-            </Menu>
+              Ecommerce
+            </Typography>
           </Box>
+        </Link>
 
-          <Box
+        <Box flexGrow={1} />
+
+        <Box
+          sx={{
+            display: { xs: "flex", md: "none" },
+          }}
+        >
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+          >
+            <MenuIcon
+              sx={{
+                fontSize: "30px",
+              }}
+            />
+          </IconButton>
+
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
             sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              marginRight: "5%",
-              fontSize: "25px",
+              display: { xs: "block", md: "none" },
             }}
           >
-            <Button
+            <MenuItem
               onClick={handleCloseNavMenu}
               sx={{
-                color: theme.palette.color,
-                display: "block",
-                bgcolor: theme.palette.bg,
+                backgroundColor: "#8CB9BD",
+                color: "black",
               }}
             >
               <Nav className="me-auto ">
@@ -207,7 +147,7 @@ function Navbar() {
                     fontSize: "1.1em",
                   }}
                 >
-                  All Product
+                  All Products
                 </Link>
                 <Link
                   to="/electronics"
@@ -218,11 +158,17 @@ function Navbar() {
                 >
                   electronics
                 </Link>
-                <Link to="jewelery" className="text-light">
+                <Link
+                  to="jewelery"
+                  className="text-light"
+                  style={{
+                    fontSize: "1.1em",
+                  }}
+                >
                   jewelery
                 </Link>
                 <Link
-                  to="/men"
+                  to="men"
                   className="text-light"
                   style={{
                     fontSize: "1.1em",
@@ -230,9 +176,8 @@ function Navbar() {
                 >
                   men's clothing
                 </Link>
-              
                 <Link
-                  to="/women"
+                  to="women"
                   className="text-light"
                   style={{
                     fontSize: "1em",
@@ -242,109 +187,170 @@ function Navbar() {
                   women's clothing
                 </Link>
               </Nav>
-            </Button>
-          </Box>
-        </Toolbar>
+            </MenuItem>
+          </Menu>
+        </Box>
+
         <Box
           sx={{
-            borderBottomRightRadius: 4,
-            borderBottomLeftRadius: 4,
+            display: { xs: "none", md: "flex" },
+
+            fontSize: "25px",
           }}
         >
-          <Container>
-            <Stack
-              direction={"row"}
-              alignItems={"center"}
-              alignContent={"center"}
-            >
-              <Box flexGrow={1} />
+          <Button
+            onClick={handleCloseNavMenu}
+            sx={{
+              color: theme.palette.color,
+              display: "block",
+              bgcolor: theme.palette.bg,
+            }}
+          >
+            <Nav className="me-auto ">
+              <Link
+                to="/products"
+                className="text-light"
+                style={{
+                  fontSize: { xs: "1", sm: "1", md: "1.1" },
+                }}
+              >
+                All Products
+              </Link>
+              <Link
+                to="/electronics"
+                className="text-light"
+                style={{
+                  fontSize: "1.1em",
+                }}
+              >
+                electronics
+              </Link>
+              <Link to="jewelery" className="text-light">
+                jewelery
+              </Link>
+              <Link
+                to="/men"
+                className="text-light"
+                style={{
+                  fontSize: "1.1em",
+                }}
+              >
+                men's
+              </Link>
 
-              <Box>
-                {theme.palette.mode === "light" ? (
-                  <IconButton
-                    onClick={() => {
-                      localStorage.setItem(
-                        "mode",
-                        theme.palette.mode === "dark" ? "light" : "dark"
-                      );
-                      colorMode.toggleColorMode();
-                    }}
-                    color="inherit"
-                  >
-                    <LightModeOutlined
-                      sx={{
-                        fontSize: "25px",
-                        color: "#fff",
-                        marginRight: "10px",
-                      }}
-                    />
-                  </IconButton>
-                ) : (
-                  <IconButton
-                    onClick={() => {
-                      localStorage.setItem(
-                        "mode",
-                        theme.palette.mode === "dark" ? "light" : "dark"
-                      );
-                      colorMode.toggleColorMode();
-                    }}
-                    color="inherit"
-                  >
-                    <DarkModeOutlined
-                      sx={{ fontSize: "25px", marginRight: "10px" }}
-                    />
-                  </IconButton>
-                )}
-              </Box>
-
-              <TwitterIcon
-                sx={{
-                  fontSize: "25px",
-                  color: "#fff",
-                  marginRight: "10px",
+              <Link
+                to="/women"
+                className="text-light"
+                style={{
+                  fontSize: "1em",
+                  color: "red",
                 }}
-              />
-              <FacebookIcon
-                sx={{
-                  fontSize: "25px",
-                  mx: 1,
-                  color: "#fff",
-                  marginRight: "10px",
-                }}
-              />
-              <InstagramIcon
-                sx={{
-                  fontSize: "25px",
-                  color: "#fff",
-                  marginRight: "10px",
-                }}
-              />
-              <Person2OutlinedIcon
-                sx={{
-                  fontSize: "25px",
-                  color: "#fff",
-                  marginRight: "10px",
-                }}
-              />
-              <IconButton aria-label="cart">
-                <Link to="cart">
-                  <StyledBadge
-                    badgeContent={products.length > 0 ? products.length : "0"}
-                    color="secondary"
-                  >
-                    <ShoppingCartIcon
-                      sx={{
-                        fontSize: "35px",
-                        color: "#fff",
-                      }}
-                    />
-                  </StyledBadge>
-                </Link>
-              </IconButton>
-            </Stack>
-          </Container>
+              >
+                women's
+              </Link>
+            </Nav>
+          </Button>
         </Box>
-      </Container>
+      </Toolbar>
+      <Box
+        sx={{
+          borderBottomRightRadius: 4,
+          borderBottomLeftRadius: 4,
+        }}
+      >
+        <Container>
+          <Stack
+            direction={"row"}
+            alignItems={"center"}
+            alignContent={"center"}
+          >
+            <Box flexGrow={1} />
+
+            <Box>
+              {theme.palette.mode === "light" ? (
+                <IconButton
+                  onClick={() => {
+                    localStorage.setItem(
+                      "mode",
+                      theme.palette.mode === "dark" ? "light" : "dark"
+                    );
+                    colorMode.toggleColorMode();
+                  }}
+                  color="inherit"
+                >
+                  <LightModeOutlined
+                    sx={{
+                      fontSize: "25px",
+                      color: "#fff",
+                      marginRight: "10px",
+                    }}
+                  />
+                </IconButton>
+              ) : (
+                <IconButton
+                  onClick={() => {
+                    localStorage.setItem(
+                      "mode",
+                      theme.palette.mode === "dark" ? "light" : "dark"
+                    );
+                    colorMode.toggleColorMode();
+                  }}
+                  color="inherit"
+                >
+                  <DarkModeOutlined
+                    sx={{ fontSize: "25px", marginRight: "10px" }}
+                  />
+                </IconButton>
+              )}
+            </Box>
+
+            <TwitterIcon
+              sx={{
+                fontSize: "25px",
+                color: "#fff",
+                marginRight: "10px",
+              }}
+            />
+            <FacebookIcon
+              sx={{
+                fontSize: "25px",
+                mx: 1,
+                color: "#fff",
+                marginRight: "10px",
+              }}
+            />
+            <InstagramIcon
+              sx={{
+                fontSize: "25px",
+                color: "#fff",
+                marginRight: "10px",
+              }}
+            />
+            <Person2OutlinedIcon
+              sx={{
+                fontSize: "25px",
+                color: "#fff",
+                marginRight: "10px",
+              }}
+            />
+            <IconButton aria-label="cart">
+              <Link to="cart">
+                <StyledBadge
+                  badgeContent={products.length > 0 ? products.length : "0"}
+                  color="secondary"
+                >
+                  <ShoppingCartIcon
+                    sx={{
+                      fontSize: "35px",
+                      color: "#fff",
+                    }}
+                  />
+                </StyledBadge>
+              </Link>
+            </IconButton>
+          </Stack>
+        </Container>
+      </Box>
     </AppBar>
   );
 }

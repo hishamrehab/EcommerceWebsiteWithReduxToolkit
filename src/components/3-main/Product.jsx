@@ -23,11 +23,11 @@ export const Product = ({ product, showButton }) => {
         <Card
           sx={{
             boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
-            marginRight: "20px",
-            maxWidth: "310px",
-            height: "auto",
+            maxWidth: { md: "300px", sm: "280px", xs: "100%" },
+            height: "870px",
             marginBottom: "50px",
-            paddingBottom:"20px"
+            paddingBottom: "20px",
+            border: "1px solid #777",
           }}
         >
           <CardContent>
@@ -84,9 +84,9 @@ export const Product = ({ product, showButton }) => {
 
             <Typography variant="body2" color="text.secondary">
               <Rating
-              sx={{
-                paddingTop:"15px"
-              }}
+                sx={{
+                  paddingTop: "15px",
+                }}
                 name="simple-controlled"
                 value={product.rating.rate}
                 onChange={(event, newValue) => {
@@ -99,7 +99,7 @@ export const Product = ({ product, showButton }) => {
 
           <CardActions
             sx={{
-              marginBottom: "10px",
+              paddingBottom: "30px",
               display: "flex",
               alignItems: "baseline",
             }}

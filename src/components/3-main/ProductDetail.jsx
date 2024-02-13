@@ -49,7 +49,7 @@ const ProductDetail = () => {
               paddingRight={"70px"}
               marginBottom={"20px"}
             >
-              <img src={product.image} width="100%" height={"440px"} />
+              <img src={product.image} width="90%" height={"450px"} />
             </Box>
 
             <Typography
@@ -84,8 +84,8 @@ const ProductDetail = () => {
                 marginTop: "15px",
               }}
             >
-            {product.description}
-            </Typography> 
+              {product.description}
+            </Typography>
 
             <Typography
               variant="body2"

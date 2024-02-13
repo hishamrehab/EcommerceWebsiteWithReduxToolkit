@@ -41,22 +41,27 @@ function Products() {
       <Container
         sx={{
           marginBottom: "50px",
+        
         }}
       >
         <Box
           sx={{
-            gap: "50px",
             minWidth: "25px",
             display: "flex",
             flexWrap: "wrap",
             alignItems: "center",
-            marginLeft: "15%",
+            alignContent: "center",
+            justifyContent: "space-between",
+            marginLeft: { xs: "70px" },
+            marginRight: { sm: "30px" },
           }}
         >
           <Button
             sx={{
-              padding: "10px",
+              padding: "7px",
               fontSize: "15px",
+              minWidth: "190px",
+              marginTop: { xs: "25px" },
             }}
             onClick={() => {
               getProducts();
@@ -71,6 +76,8 @@ function Products() {
                 sx={{
                   padding: "10px",
                   fontSize: "15px",
+                  minWidth: "190px",
+                  marginTop: { xs: "25px" },
                 }}
                 key={cat}
                 variant="outlined"
@@ -83,6 +90,7 @@ function Products() {
             );
           })}
         </Box>
+
         <Box sx={{ marginTop: "50px" }}>
           {products.length > 0 ? (
             <Stack
