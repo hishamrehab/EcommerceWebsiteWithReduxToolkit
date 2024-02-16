@@ -139,7 +139,7 @@ function Navbar() {
                 color: "black",
               }}
             >
-              <Nav className="me-auto ">
+              <Nav className="me-auto">
                 <Link
                   to="/products"
                   className="text-light"
@@ -252,6 +252,7 @@ function Navbar() {
           </Button>
         </Box>
       </Toolbar>
+
       <Box
         sx={{
           borderBottomRightRadius: 4,
@@ -309,6 +310,7 @@ function Navbar() {
                 fontSize: "25px",
                 color: "#fff",
                 marginRight: "10px",
+                cursor: "pointer",
               }}
             />
             <FacebookIcon
@@ -317,6 +319,7 @@ function Navbar() {
                 mx: 1,
                 color: "#fff",
                 marginRight: "10px",
+                cursor: "pointer",
               }}
             />
             <InstagramIcon
@@ -324,6 +327,7 @@ function Navbar() {
                 fontSize: "25px",
                 color: "#fff",
                 marginRight: "10px",
+                cursor: "pointer",
               }}
             />
             <Person2OutlinedIcon
@@ -331,6 +335,7 @@ function Navbar() {
                 fontSize: "25px",
                 color: "#fff",
                 marginRight: "10px",
+                cursor: "pointer",
               }}
             />
             <IconButton aria-label="cart">

@@ -13,7 +13,7 @@ import WomenPage from "./pages/7-WomenPage";
 import Footer from "./components/4-Footer/Footer";
 import SecondNavbar from "./components/1-Navbar/Navbar";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import ProductDetail from "./components/3-main/ProductDetail";
+import ProductDetail from "./pages/8-ProductDetail";
 import AllProducts from "./pages/2-AllProducts";
 function App() {
   const [theme, colorMode] = useMode();
@@ -29,18 +29,12 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/products" element={<AllProducts />} />
-              <Route
-                path="/jewelery"
-                element={<JeweleryPage  />}
-              />
-              <Route
-                path="/electronics"
-                element={<ElectronicsPage />}
-              />
+              <Route path="/jewelery" element={<JeweleryPage />} />
+              <Route path="/electronics" element={<ElectronicsPage />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/men" element={<Menpage />} />
               <Route path="/women" element={<WomenPage />} />
-              <Route path="/product/:productId" element={<ProductDetail />} /> 
+              <Route path="/product/:productId" element={<ProductDetail />} />
             </Routes>
             <Footer />
           </BrowserRouter>

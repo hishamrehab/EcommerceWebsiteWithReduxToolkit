@@ -41,7 +41,6 @@ function Products() {
       <Container
         sx={{
           marginBottom: "50px",
-        
         }}
       >
         <Box
