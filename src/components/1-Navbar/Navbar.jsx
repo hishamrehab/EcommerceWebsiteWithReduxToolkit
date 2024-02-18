@@ -10,7 +10,6 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Nav from "react-bootstrap/Nav";
-import { useTheme } from "@emotion/react";
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
 import { ColorModeContext } from "../../theme";
@@ -25,26 +24,13 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useSelector } from "react-redux";
 
 function Navbar() {
-  const theme = useTheme();
-
   const products = useSelector((state) => state.cart.products);
-
-  const colorMode = useContext(ColorModeContext);
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-
-  const StyledBadge = styled(Badge)(({ theme }) => ({
-    "& .MuiBadge-badge": {
-      right: -3,
-      top: 13,
-      border: `2px solid ${theme.palette.background.paper}`,
-      padding: "0 4px",
-    },
-  }));
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -54,7 +40,7 @@ function Navbar() {
     <AppBar
       position="static"
       sx={{
-        bgcolor: "tomato",
+        backgroundColor: "#fff",
       }}
     >
       <Toolbar>
@@ -73,22 +59,16 @@ function Navbar() {
             }}
             variant="body2"
           >
-            <img
-              src="https://authorize.chec.io/images/chec.logo.dark.png"
-              width={"120px"}
-              height={"40px"}
-            />
-
             <Typography
               sx={{
-                color: "#474F7A",
+                color: "#000",
                 fontWeight: "bold",
                 fontSize: "20px",
                 display: "block",
                 marginLeft: "5px",
               }}
             >
-              Ecommerce
+              Ecommerce Website
             </Typography>
           </Box>
         </Link>
@@ -145,6 +125,7 @@ function Navbar() {
                   className="text-light"
                   style={{
                     fontSize: "1.1em",
+                    marginRight: "10px",
                   }}
                 >
                   All Products
@@ -154,6 +135,7 @@ function Navbar() {
                   className="text-light"
                   style={{
                     fontSize: "1.1em",
+                    marginRight: "10px",
                   }}
                 >
                   electronics
@@ -163,6 +145,7 @@ function Navbar() {
                   className="text-light"
                   style={{
                     fontSize: "1.1em",
+                    marginRight: "10px",
                   }}
                 >
                   jewelery
@@ -172,6 +155,7 @@ function Navbar() {
                   className="text-light"
                   style={{
                     fontSize: "1.1em",
+                    marginRight: "10px",
                   }}
                 >
                   men's clothing
@@ -198,41 +182,51 @@ function Navbar() {
             fontSize: "25px",
           }}
         >
-          <Button
-            onClick={handleCloseNavMenu}
-            sx={{
-              color: theme.palette.color,
-              display: "block",
-              bgcolor: theme.palette.bg,
-            }}
-          >
-            <Nav className="me-auto ">
+          <Button onClick={handleCloseNavMenu}>
+            <Nav
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap:"20px"
+              }}
+            >
               <Link
                 to="/products"
-                className="text-light"
+                className="text-dark"
                 style={{
                   fontSize: { xs: "1", sm: "1", md: "1.1" },
+                  textDecoration: "none",
                 }}
               >
                 All Products
               </Link>
               <Link
                 to="/electronics"
-                className="text-light"
+                className="text-dark"
                 style={{
                   fontSize: "1.1em",
+                  textDecoration: "none",
+                  marginRight: "10px",
                 }}
               >
                 electronics
               </Link>
-              <Link to="jewelery" className="text-light">
+              <Link
+                to="jewelery"
+                className="text-dark "
+                style={{
+                  textDecoration: "none",
+                }}
+              >
                 jewelery
               </Link>
               <Link
                 to="/men"
-                className="text-light"
+                className="text-dark"
                 style={{
                   fontSize: "1.1em",
+                  textDecoration: "none",
                 }}
               >
                 men's
@@ -240,10 +234,11 @@ function Navbar() {
 
               <Link
                 to="/women"
-                className="text-light"
+                className="text-dark"
                 style={{
                   fontSize: "1em",
                   color: "red",
+                  textDecoration: "none",
                 }}
               >
                 women's
@@ -252,110 +247,6 @@ function Navbar() {
           </Button>
         </Box>
       </Toolbar>
-
-      <Box
-        sx={{
-          borderBottomRightRadius: 4,
-          borderBottomLeftRadius: 4,
-        }}
-      >
-        <Container>
-          <Stack
-            direction={"row"}
-            alignItems={"center"}
-            alignContent={"center"}
-          >
-            <Box flexGrow={1} />
-
-            <Box>
-              {theme.palette.mode === "light" ? (
-                <IconButton
-                  onClick={() => {
-                    localStorage.setItem(
-                      "mode",
-                      theme.palette.mode === "dark" ? "light" : "dark"
-                    );
-                    colorMode.toggleColorMode();
-                  }}
-                  color="inherit"
-                >
-                  <LightModeOutlined
-                    sx={{
-                      fontSize: "25px",
-                      color: "#fff",
-                      marginRight: "10px",
-                    }}
-                  />
-                </IconButton>
-              ) : (
-                <IconButton
-                  onClick={() => {
-                    localStorage.setItem(
-                      "mode",
-                      theme.palette.mode === "dark" ? "light" : "dark"
-                    );
-                    colorMode.toggleColorMode();
-                  }}
-                  color="inherit"
-                >
-                  <DarkModeOutlined
-                    sx={{ fontSize: "25px", marginRight: "10px" }}
-                  />
-                </IconButton>
-              )}
-            </Box>
-
-            <TwitterIcon
-              sx={{
-                fontSize: "25px",
-                color: "#fff",
-                marginRight: "10px",
-                cursor: "pointer",
-              }}
-            />
-            <FacebookIcon
-              sx={{
-                fontSize: "25px",
-                mx: 1,
-                color: "#fff",
-                marginRight: "10px",
-                cursor: "pointer",
-              }}
-            />
-            <InstagramIcon
-              sx={{
-                fontSize: "25px",
-                color: "#fff",
-                marginRight: "10px",
-                cursor: "pointer",
-              }}
-            />
-            <Person2OutlinedIcon
-              sx={{
-                fontSize: "25px",
-                color: "#fff",
-                marginRight: "10px",
-                cursor: "pointer",
-              }}
-            />
-            <IconButton aria-label="cart">
-              <Link to="cart">
-                <StyledBadge
-                  badgeContent={products.length > 0 ? products.length : "0"}
-                  color="secondary"
-                >
-                  <ShoppingCartIcon
-                    sx={{
-                      fontSize: "35px",
-                      color: "#fff",
-                    }}
-                  />
-                </StyledBadge>
-              </Link>
-            </IconButton>
-          </Stack>
-        </Container>
-      </Box>
     </AppBar>
   );
 }

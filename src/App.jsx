@@ -15,6 +15,9 @@ import SecondNavbar from "./components/1-Navbar/Navbar";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import ProductDetail from "./pages/8-ProductDetail";
 import AllProducts from "./pages/2-AllProducts";
+import FirstNavbar from "./components/1-Navbar/FirstNavbar";
+import ThirdNavbar from "./components/1-Navbar/ThirdNavbar";
+
 function App() {
   const [theme, colorMode] = useMode();
 
@@ -25,7 +28,10 @@ function App() {
           <CssBaseline />
 
           <BrowserRouter>
+            <FirstNavbar />
+            <ThirdNavbar />
             <SecondNavbar />
+
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/products" element={<AllProducts />} />

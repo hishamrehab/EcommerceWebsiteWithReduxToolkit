@@ -30,7 +30,8 @@
     "redux": "^4.2.1",
     "redux-persist": "^6.0.0",
     "router-dom": "^2.2.11",
-    "styled-components": "^6.1.1"
+    "styled-components": "^6.1.1",
+    "swiper": "^11.0.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
