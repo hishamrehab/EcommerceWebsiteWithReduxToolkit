@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Product from "./Product";
 import { Box, Container, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
-import { useTheme } from "@emotion/react";
+
 
 function Products() {
   const api_url = "https://fakestoreapi.com/products";

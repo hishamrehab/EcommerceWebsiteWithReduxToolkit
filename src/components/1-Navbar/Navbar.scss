@@ -1,0 +1,25 @@
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+
+  .navbar-icons1 {
+    color: #777;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .navbar-icons2 {
+    color: #777;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+
+  }
+}

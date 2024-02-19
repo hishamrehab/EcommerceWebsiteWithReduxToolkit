@@ -11,25 +11,22 @@ import ElectronicsPage from "./pages/3-ElectronicsPage";
 import Menpage from "./pages/5-Menpage";
 import WomenPage from "./pages/7-WomenPage";
 import Footer from "./components/4-Footer/Footer";
-import SecondNavbar from "./components/1-Navbar/Navbar";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import ProductDetail from "./pages/8-ProductDetail";
 import AllProducts from "./pages/2-AllProducts";
-import FirstNavbar from "./components/1-Navbar/FirstNavbar";
-import ThirdNavbar from "./components/1-Navbar/ThirdNavbar";
-
+import Navbar from "./components/1-navbar/Navbar";
+import SecondNavbar from "./components/1-navbar/SecondNavbar";
 function App() {
   const [theme, colorMode] = useMode();
 
   return (
-    <>
+    <div className="app">
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
 
           <BrowserRouter>
-            <FirstNavbar />
-            <ThirdNavbar />
+            <Navbar />
             <SecondNavbar />
 
             <Routes>
@@ -46,7 +43,7 @@ function App() {
           </BrowserRouter>
         </ThemeProvider>
       </ColorModeContext.Provider>
-    </>
+    </div>
   );
 }
 

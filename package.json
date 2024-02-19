@@ -30,6 +30,7 @@
     "redux": "^4.2.1",
     "redux-persist": "^6.0.0",
     "router-dom": "^2.2.11",
+    "sass": "^1.71.0",
     "styled-components": "^6.1.1",
     "swiper": "^11.0.6"
   },
