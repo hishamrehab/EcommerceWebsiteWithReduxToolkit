@@ -2,7 +2,7 @@ import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import PersonIcon from "@mui/icons-material/Person";
+import Person3OutlinedIcon from "@mui/icons-material/Person3Outlined";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
@@ -29,7 +29,7 @@ const SecondNavbar = () => {
         </div>
         <div className="navbar-icons2">
           <span>
-            <PersonIcon
+            <Person3OutlinedIcon
               style={{
                 fontSize: "35px",
               }}
