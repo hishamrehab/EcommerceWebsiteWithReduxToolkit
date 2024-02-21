@@ -14,6 +14,22 @@ import jewelry from "../images/icons/jewelry.svg";
 import perfume from "../images/icons/perfume.svg";
 import cosmetics from "../images/icons/cosmetics.svg";
 import bags from "../images/icons/bag.svg";
+import clothes1 from "../images/products/clothes-1.jpg";
+import clothes2 from "../images/products/clothes-2.jpg";
+import clothes3 from "../images/products/clothes-3.jpg";
+import clothes4 from "../images/products/clothes-4.jpg";
+import jacket1 from "../images/products/jacket-1.jpg";
+import jacket2 from "../images/products/jacket-2.jpg";
+import jacket3 from "../images/products/jacket-3.jpg";
+import sports1 from "../images/products/sports-1.jpg";
+import sports2 from "../images/products/sports-2.jpg";
+import sports3 from "../images/products/sports-3.jpg";
+import sports4 from "../images/products/sports-4.jpg";
+import sports5 from "../images/products/sports-5.jpg";
+import sports6 from "../images/products/sports-6.jpg";
+import partywear from "../images/products/party-wear-1.jpg";
+import shoe from "../images/products/shoe-2.jpg";
+import shoe1 from "../images/products/shoe-1_1.jpg";
 export const sliders = [
   {
     id: 1,
@@ -205,5 +221,111 @@ export const sidebarCategories = [
 
     item4: "Wallet",
     price4: "75",
+  },
+];
+
+export const arrivals = [
+  {
+    id: 19,
+    image: clothes1,
+    title: "Relaxed Short Full Sleeve...",
+    subtitle: "Clothes",
+    price: "20",
+    deletedPrice: "35",
+  },
+  {
+    id: 20,
+    image: clothes2,
+    title: "Girls Pnk Embro Design...",
+    subtitle: "Clothes",
+    price: "61",
+    deletedPrice: "35",
+  },
+  {
+    id: 21,
+    image: clothes3,
+    title: "Black Floral Wrap Midi S",
+    subtitle: "Clothes",
+    price: "50.00",
+    deletedPrice: "76.00",
+  },
+  {
+    id: 22,
+    image: clothes4,
+    title: "Girls Pnk Embro Design...",
+    subtitle: "Clothes",
+    price: "61",
+    deletedPrice: "35",
+  },
+  {
+    id: 23,
+    image: jacket1,
+    title: "Girls Pnk Embro Design...",
+    subtitle: "Clothes",
+    price: "61",
+    deletedPrice: "35",
+  },
+  {
+    id: 24,
+    image: jacket2,
+    title: "Girls Pnk Embro Design...",
+    subtitle: "Jackets",
+    price: "61",
+    deletedPrice: "35",
+  },
+];
+
+export const trending = [
+ 
+
+  {
+    id: 27,
+    image: sports1,
+    title: "Running & Trekking Sho...",
+    subtitle: "Jackets",
+    price: "61",
+    deletedPrice: "35",
+  },
+  {
+    id: 28,
+    image: sports2,
+    title: "trekking & running shoes - black..",
+    subtitle: "Sports",
+    price: "78",
+    deletedPrice: "100",
+  },
+
+  {
+    id: 29,
+    image: partywear,
+    title: "Womens Party Wear Sho...",
+    subtitle: "Party Wear",
+    price: "94",
+    deletedPrice: "120",
+  },
+  {
+    id: 30,
+    image: sports3,
+    title: "Sports Claw Women's Sh...",
+    subtitle: "sports",
+    price: "130",
+    deletedPrice: "250",
+  },
+
+  {
+    id: 31,
+    image: shoe,
+    title: "Casual Men's Brown Sh...",
+    subtitle: "Casual",
+    price: "55",
+    deletedPrice: "95",
+  },
+  {
+    id: 32,
+    image: shoe1,
+    title: "Men's Leather Formal Wear...",
+    subtitle: "Formal",
+    price: "56.00",
+    deletedPrice: "75",
   },
 ];

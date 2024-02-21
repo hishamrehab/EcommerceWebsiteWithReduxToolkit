@@ -4,7 +4,7 @@ import "./SideBar.scss";
 
 import { sidebarCategories } from "../../data";
 import DropdownMenu from "./DropdownMenu";
-import { Divider } from "@mui/material";
+
 
 const SideBarCategories = () => {
   return (
