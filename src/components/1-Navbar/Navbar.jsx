@@ -9,8 +9,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
-
 import logo from "../../../images/logo/logo.svg";
+import SideBar from "../sidebar/SideBar";
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -36,8 +36,16 @@ function Navbar() {
           <img src={logo} width={"120px"} />
         </Link>
 
-        <Box flexGrow={1} />
+        <Box
+          sx={{
+            color: "#000",
+           
+          }}
+        >
+          <SideBar />
+        </Box>
 
+        <Box flexGrow={1} />
         <Box
           sx={{
             display: { xs: "flex", md: "none" },
@@ -105,7 +113,6 @@ function Navbar() {
             </MenuItem>
           </Menu>
         </Box>
-
         <Box
           sx={{
             display: { xs: "none", md: "flex" },

@@ -8,6 +8,7 @@ const HomePage = () => {
     <div>
       <Slider />
       <Category />
+
       <Products />
     </div>
   );
