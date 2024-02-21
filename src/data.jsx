@@ -30,6 +30,14 @@ import sports6 from "../images/products/sports-6.jpg";
 import partywear from "../images/products/party-wear-1.jpg";
 import shoe from "../images/products/shoe-2.jpg";
 import shoe1 from "../images/products/shoe-1_1.jpg";
+import watch1 from "../images/products/watch-1.jpg";
+import watch2 from "../images/products/watch-2.jpg";
+import watch3 from "../images/products/watch-3.jpg";
+import watch4 from "../images/products/watch-4.jpg";
+
+
+import jewellery from "../images/products/jewellery-1.jpg";
+
 export const sliders = [
   {
     id: 1,
@@ -276,8 +284,6 @@ export const arrivals = [
 ];
 
 export const trending = [
- 
-
   {
     id: 27,
     image: sports1,
@@ -322,6 +328,59 @@ export const trending = [
   },
   {
     id: 32,
+    image: shoe1,
+    title: "Men's Leather Formal Wear...",
+    subtitle: "Formal",
+    price: "56.00",
+    deletedPrice: "75",
+  },
+];
+
+export const rating = [
+  {
+    id: 33,
+    image: watch1,
+    title: "Running & Trekking Sho...",
+    subtitle: "Jackets",
+    price: "61",
+    deletedPrice: "35",
+  },
+  {
+    id: 34,
+    image: watch2,
+    title: "trekking & running shoes - black..",
+    subtitle: "Sports",
+    price: "78",
+    deletedPrice: "100",
+  },
+
+  {
+    id: 35,
+    image: watch3,
+    title: "Womens Party Wear Sho...",
+    subtitle: "Party Wear",
+    price: "94",
+    deletedPrice: "120",
+  },
+  {
+    id: 36,
+    image: watch4,
+    title: "Sports Claw Women's Sh...",
+    subtitle: "sports",
+    price: "130",
+    deletedPrice: "250",
+  },
+
+  {
+    id: 37,
+    image: jewellery,
+    title: "Casual Men's Brown Sh...",
+    subtitle: "Casual",
+    price: "55",
+    deletedPrice: "95",
+  },
+  {
+    id: perfume,
     image: shoe1,
     title: "Men's Leather Formal Wear...",
     subtitle: "Formal",
