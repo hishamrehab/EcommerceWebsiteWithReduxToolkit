@@ -23,8 +23,8 @@ export const Product = ({ product, showButton }) => {
         <Card
           sx={{
             boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
-            maxWidth: { md: "300px", sm: "280px", xs: "100%" },
-            height: "870px",
+            maxWidth: { md: "280px", sm: "250px", xs: "100%" },
+            height: "780px",
             marginBottom: "50px",
             paddingBottom: "20px",
             border: "1px solid #777",
@@ -32,15 +32,15 @@ export const Product = ({ product, showButton }) => {
         >
           <CardContent>
             <Box>
-              <img src={product.image} width="100%" height={"350px"} />
+              <img src={product.image} width="100%" height={"300px"} />
             </Box>
 
             <Typography
               gutterBottom
-              variant="h5"
+              variant="h7"
               component="div"
               sx={{
-                marginTop: "10px",
+                marginTop: "15px",
                 marginBottom: "15px",
               }}
             >
@@ -51,7 +51,7 @@ export const Product = ({ product, showButton }) => {
               variant="body2"
               color="text.secondary"
               sx={{
-                fontSize: "20px",
+                fontSize: "16px",
                 color: "#779",
               }}
             >
@@ -74,9 +74,8 @@ export const Product = ({ product, showButton }) => {
               variant="body2"
               color="text.secondary"
               sx={{
-                fontSize: "20px",
+                fontSize: "15px",
                 marginTop: "10px",
-                color: "tomato",
               }}
             >
               price : {product.price}$
@@ -120,7 +119,24 @@ export const Product = ({ product, showButton }) => {
                 )
               }
             >
-              Add TO Cart
+              <span
+                style={{
+                  color: "#FFF",
+                  backgroundColor: "#000",
+                  fontSize: "12px",
+
+                  padding: "10px",
+                  hover: {
+                    "&:hover": {
+                      backgroundColor: "#000",
+                      color: "#FFF",
+                    },
+                  },
+                }}
+              >
+                {" "}
+                Add TO Cart
+              </span>
             </Button>
             <Button>
               {showButton && (

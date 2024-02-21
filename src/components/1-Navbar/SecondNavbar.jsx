@@ -12,19 +12,40 @@ import "./Navbar.scss";
 const SecondNavbar = () => {
   return (
     <Container>
-      <div className="navbar-icons">
+      <div
+        className="navbar-icons"
+        style={{
+          paddingBottom: "10px",
+        }}
+      >
         <div className="navbar-icons1">
           <span>
-            <FacebookIcon />
+            <FacebookIcon
+              style={{
+                fontSize: "30px",
+              }}
+            />
           </span>
           <span>
-            <InstagramIcon />
+            <InstagramIcon
+              style={{
+                fontSize: "30px",
+              }}
+            />
           </span>
           <span>
-            <LinkedInIcon />
+            <LinkedInIcon
+              style={{
+                fontSize: "30px",
+              }}
+            />
           </span>
           <span>
-            <GitHubIcon />
+            <GitHubIcon
+              style={{
+                fontSize: "30px",
+              }}
+            />
           </span>
         </div>
         <div className="navbar-icons2">

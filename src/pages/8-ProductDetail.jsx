@@ -33,25 +33,39 @@ const ProductDetail = () => {
 
   return (
     <Container>
-      <Stack>
+      <Stack
+        sx={{
+          position: "relative",
+          marginTop: "50px",
+        }}
+      >
         <Card
           sx={{
-            boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
             marginBottom: "40px",
-            width: "90%",
-            height: "auto",
+            marginRight: "auto",
+            marginLeft: "auto",
+
+            height: "550px",
           }}
         >
-          <CardContent>
-            <Box
-              marginLeft={"10%"}
-              marginTop={"25px"}
-              paddingRight={"70px"}
-              marginBottom={"20px"}
-            >
-              <img src={product.image} width="90%" height={"450px"} />
-            </Box>
+          <Box>
+            <img
+              src={product.image}
+              width="300px"
+              height={"400px"}
+              style={{
+                position: "absolute",
+                top: "50px",
+                left: "0",
+              }}
+            />
+          </Box>
 
+          <CardContent
+            sx={{
+              marginLeft: "400px",
+            }}
+          >
             <Typography
               gutterBottom
               variant="h5"
@@ -93,7 +107,6 @@ const ProductDetail = () => {
               sx={{
                 fontSize: "20px",
                 marginTop: "10px",
-                color: "tomato",
               }}
             >
               price : {product.price}$
@@ -122,8 +135,26 @@ const ProductDetail = () => {
                 )
               }
             >
-              Add TO Cart
+              <span
+                style={{
+                  color: "#FFF",
+                  backgroundColor: "#000",
+                  fontSize: "12px",
+                  padding: "10px",
+                  marginLeft: "500px",
+                  marginTop: "50px",
+                  hover: {
+                    "&:hover": {
+                      backgroundColor: "#000",
+                      color: "#FFF",
+                    },
+                  },
+                }}
+              >
+                Add To Cart
+              </span>
             </Button>
+
             <Button>
               {showButton && <Link to={`/product/${product.id}`}>Details</Link>}
             </Button>

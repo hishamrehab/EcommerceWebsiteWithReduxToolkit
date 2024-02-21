@@ -4,7 +4,6 @@ import Product from "./Product";
 import { Box, Container, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 
-
 function Products() {
   const api_url = "https://fakestoreapi.com/products";
   const [products, setProducts] = useState([]);
@@ -61,13 +60,32 @@ function Products() {
               fontSize: "15px",
               minWidth: "190px",
               marginTop: { xs: "25px" },
+              backgroundColor: "#000",
+              color: "#fff",
+              hover: {
+                backgroundColor: "#000",
+                color: "#FFF",
+                width:"100%"
+              },
             }}
             onClick={() => {
               getProducts();
             }}
             variant="outlined"
           >
-            All
+            <span
+              style={{
+                backgroundColor: "#000",
+                color: "#fff",
+                hover: {
+                  backgroundColor: "#000",
+                  color: "#FFF",
+                  width: "100%",
+                },
+              }}
+            >
+              All
+            </span>
           </Button>
           {categories.map((cat) => {
             return (
@@ -89,7 +107,6 @@ function Products() {
             );
           })}
         </Box>
-
         <Box sx={{ marginTop: "50px" }}>
           {products.length > 0 ? (
             <Stack
@@ -107,10 +124,11 @@ function Products() {
                   sx={{
                     display: "flex",
                     flexDirection: "row",
-                    justifyContent: "space-between",
+                    // justifyContent: "space-between",
                     alignItems: "center",
-                    gap: "15px",
+                    // gap: "10px",
                     justifyItems: "flex-start",
+                    flexWrap: "wrap",
                   }}
                 >
                   <>

@@ -27,7 +27,7 @@ function App() {
 
           <BrowserRouter>
             <Navbar />
-            <SecondNavbar />
+            {/* <SecondNavbar /> */}
 
             <Routes>
               <Route path="/" element={<HomePage />} />

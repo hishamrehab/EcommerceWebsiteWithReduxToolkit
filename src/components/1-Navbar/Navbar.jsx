@@ -11,6 +11,8 @@ import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import logo from "../../../images/logo/logo.svg";
 import SideBar from "../sidebar/SideBar";
+import { Divider } from "@mui/material";
+import SecondNavbar from "./SecondNavbar";
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -39,7 +41,6 @@ function Navbar() {
         <Box
           sx={{
             color: "#000",
-           
           }}
         >
           <SideBar />
@@ -148,6 +149,7 @@ function Navbar() {
           </Nav>
         </Box>
       </Toolbar>
+      <SecondNavbar />
     </AppBar>
   );
 }
