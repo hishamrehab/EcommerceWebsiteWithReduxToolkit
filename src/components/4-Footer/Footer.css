@@ -52,11 +52,22 @@
 }
 
 /* Footer */
-.brand-directory {
+.footer-section {
   background-color: var(--onyx);
-  
-  .brand-title {
-    color: var(--salmon-pink);
+  padding-top: 40px;
+  .brand-directory {
+    .brand-title {
+      color: var(--salmon-pink);
+      padding-bottom: 10px;
+    }
+    .fashion {
+      color: hsl(0, 2%, 47%);
+      .fristword {
+        color: var(--spanish-gray);
+        margin-right: 15px;
+      }
+    }
   }
 }
+
 /* ./Footer */

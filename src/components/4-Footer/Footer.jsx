@@ -4,32 +4,41 @@ import { Container } from "@mui/material";
 import payment from "../../../images/products/payment.png";
 const Footer = () => {
   return (
-    <div>
+    <div className="footer-section">
       <Container>
         <div className="brand-directory">
           <h6 className="brand-title">BRAND DIRECTORY</h6>
           <div className="fashion">
-            T-Shirt: Shirts | Shorts & Jeans | Jacket | Dress & Frock |
-            InnerWear | Hosiery
+            <span className="fristword">FASHION :</span> T-Shirt: Shirts |
+            Shorts & Jeans | Jacket | Dress & Frock | InnerWear | Hosiery
           </div>
-          <div>
-            Sport : Formal | Boots | Casual | Cowboy Shoes | Safety Shoes |
-            Party Wear Shoes | Branded | Firstcopy | Long Shoes
+          <div className="fashion">
+            <span className="fristword">FOOTWEAR : </span> Formal | Boots |
+            Casual | Cowboy Shoes | Safety Shoes | Party Wear Shoes | Branded |
+            Firstcopy | Long Shoes
           </div>
-          <div>
-            JEWELLERY : Necklace | Earrings | Couple Rings | Pendants | Crystal
-            | Bangles | Bracelets | Nosepin | Chain | Earrings | Couple Rings{" "}
+          <div className="fashion">
+            <span className="fristword">JEWELLERY : </span> Necklace | Earrings
+            | Couple Rings | Pendants | Crystal | Bangles | Bracelets | Nosepin
+            | Chain | Earrings | Couple Rings{" "}
           </div>
-          <div>
-            COSMETICS : Shampoo | Bodywash | Facewash | Makeup Kit | Liner |
-            Lipstick | Prefume | Body Soap | Scrub | Hair Gel | Hair Colors |
-            Hair Dye | Sunscreen | Skin Loson | Liner | Lipstick
+          <div className="fashion">
+            <span className="fristword">COSMETICS : </span> Shampoo | Bodywash |
+            Facewash | Makeup Kit | Liner | Lipstick | Prefume | Body Soap |
+            Scrub | Hair Gel | Hair Colors | Hair Dye | Sunscreen | Skin Loson |
+            Liner | Lipstick
           </div>
         </div>
-        <div className="Footer">
+        <hr
+          style={{
+            color: "#777",
+          }}
+        />
+
+        <div className="Footer-second-section">
           <div className="top">
             <div className="item">
-              <h1>POPULAR CATEGORIES</h1>
+              <h5>POPULAR CATEGORIES</h5>
               <span>Prices Drop</span>
               <span>New Products</span>
               <span>Best Sales</span>
