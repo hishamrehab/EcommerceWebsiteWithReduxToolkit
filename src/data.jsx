@@ -39,7 +39,8 @@ import shoes9 from "../images/products/1.jpg";
 import shirt10 from "../images/products/2.jpg";
 import jacket11 from "../images/products/3.jpg";
 import hat3 from "../images/products/4.jpg";
-
+import shampoo from "../images/products/shampoo.jpg";
+import jewellery1 from "../images/products/jewellery-1.jpg";
 export const sliders = [
   {
     id: 1,
@@ -423,5 +424,23 @@ export const bestsellers = [
     rating: "5",
     price: "45",
     deletedPrice: "30",
+  },
+];
+export const dealoftheday = [
+  {
+    id: 39,
+    image: shampoo,
+    title: "SHAMPOO, CONDITIONER & FACEWASH PACKS",
+    rating: "3",
+    price: "3500",
+    delPrice: "6000",
+  },
+  {
+    id: 40,
+    image: jewellery1,
+    title: "ROSE GOLD DIAMONDS EARRING",
+    price: "2500",
+    delPrice: "3300",
+    rating: "3.5",
   },
 ];

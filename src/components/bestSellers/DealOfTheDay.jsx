@@ -1,13 +1,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Rating from "@mui/material/Rating";
-import { bestsellers } from "../../data";
+import { bestsellers, dealoftheday } from "../../data";
 
 import "swiper/css";
 
 import "./DaealOfTheDay.css";
 import { Container } from "react-bootstrap";
-
+import FixeTimar from "./FixedTimar";
 const Dealoftheday = () => {
   const [value, setValue] = React.useState(4);
   return (
@@ -63,6 +63,13 @@ const Dealoftheday = () => {
       </div>
 
       <div className="my-swipper">
+      <h5
+          style={{
+            marginBottom: "15px",
+          }}
+        >
+          Deal Of The Day
+        </h5>
         <Swiper
           className="mySwiper"
           style={{
@@ -71,76 +78,99 @@ const Dealoftheday = () => {
             border: "1px solid hsl(0, 0%, 93%)",
           }}
         >
-          <SwiperSlide>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: "30px",
-              }}
-            >
-              <img src="../../../images/products/shampoo.jpg" />
+          {dealoftheday.map((deal) => {
+            return (
+              <SwiperSlide key={deal.id}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: "30px",
+                  }}
+                >
+                  <img src={deal.image} />
 
-              <div
-                className="swiperSlide-info"
-                style={{
-                  mixWidth: "60%",
-                  paddingRight: "15px",
-                }}
-              >
-                <Rating
-                  name="read-only"
-                  value={4}
-                  readOnly
-                  className="rating"
-                  sx={{
-                    marginBottom: "20px",
-                  }}
-                />
-                <h5
-                  style={{
-                    fontSize: "14px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  SHAMPOO, CONDITIONER & FACEWASH PACKS
-                </h5>
-                <p
-                  style={{
-                    color: "#777",
-                    fontSize: "17px",
-                  }}
-                >
-                  Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor
-                  sit amet consectetur Lorem ipsum dolor
-                </p>
-                <div className="prices">
-                  <span
-                    className="price"
+                  <div
+                    className="swiperSlide-info"
                     style={{
-                      color: "hsl(353, 100%, 78)",
-                      fontSize: "22px",
-                      marginRight: "12px",
+                      mixWidth: "60%",
+                      paddingRight: "15px",
                     }}
                   >
-                    15.00$
-                  </span>
-                  <span>
-                    <del>23.22$</del>
-                  </span>
-                  <h6
-                    style={{
-                      fontSize: "13px",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    HURRY UP! OFFER ENDS IN:
-                  </h6>
+                    <Rating
+                      name="read-only"
+                      value={deal.rating}
+                      readOnly
+                      className="rating"
+                      sx={{
+                        marginBottom: "20px",
+                      }}
+                    />
+                    <h5
+                      style={{
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {deal.title}
+                    </h5>
+                    <p
+                      style={{
+                        color: "#777",
+                        fontSize: "17px",
+                      }}
+                    >
+                      Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                      dolor sit amet consectetur Lorem ipsum dolor
+                    </p>
+                    <div className="prices">
+                      <span
+                        className="price"
+                        style={{
+                          color: "hsl(353, 100%, 78)",
+                          fontSize: "25px",
+                          marginRight: "12px",
+                          color: " hsl(353, 100%, 78%)",
+                        }}
+                      >
+                        {deal.price}$
+                      </span>
+                      <span>
+                        <del
+                          style={{
+                            fontSize: "20px",
+                          }}
+                        >
+                          {deal.delPrice}$
+                        </del>
+                      </span>
+                      <h6
+                        style={{
+                          fontSize: "13px",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        HURRY UP! OFFER ENDS IN:
+                      </h6>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "20px",
+                          marginTop: "15px",
+                        }}
+                      >
+                        <FixeTimar time={"24"} name={"Hours"} />
+                        <FixeTimar time={"59"} name={"Min"} />
+                        <FixeTimar time={"00"} name={"Sec"} />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </SwiperSlide>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </div>
