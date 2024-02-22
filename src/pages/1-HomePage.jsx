@@ -5,7 +5,7 @@ import Category from "../components/category/Category";
 import NewArrivals from "../components/FaturedProducts/NewArrivals";
 import TrendingProducts from "../components/FaturedProducts/TrendingProducts";
 import Toprated from "../components/FaturedProducts/Toprated";
-
+import Dealoftheday from "../components/bestSellers/DealOfTheDay";
 const HomePage = () => {
   return (
     <div>
@@ -15,6 +15,7 @@ const HomePage = () => {
       <TrendingProducts />
       <Toprated />
       <Products />
+      <Dealoftheday />
     </div>
   );
 };

@@ -62,7 +62,7 @@ function Products() {
               marginTop: { xs: "25px" },
               color: "#fff",
               backgroundColor: "#000",
-              padding: "7px",
+         
               borderRadius: "5px",
             }}
             onClick={() => {

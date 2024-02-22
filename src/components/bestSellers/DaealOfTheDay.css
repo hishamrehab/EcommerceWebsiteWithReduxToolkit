@@ -1,0 +1,26 @@
+.deal-of-the-day {
+  margin-top: 20px;
+  border: 1px solid #0c0a0a;
+}
+.swiper {
+  width: 500px;
+  height: 500px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
