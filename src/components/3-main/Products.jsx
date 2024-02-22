@@ -36,14 +36,14 @@ function Products() {
   return (
     <>
       <h2 className="text-center p-3"> Our Products </h2>
-      <hr />
+
       <Container
         sx={{
           marginBottom: "50px",
         }}
       >
-        <Box
-          sx={{
+        <div
+          style={{
             minWidth: "25px",
             display: "flex",
             flexWrap: "wrap",
@@ -54,47 +54,36 @@ function Products() {
             marginRight: { sm: "30px" },
           }}
         >
-          <Button
-            sx={{
+          <button
+            style={{
               padding: "7px",
-              fontSize: "15px",
+              fontSize: "17px",
               minWidth: "190px",
               marginTop: { xs: "25px" },
-              backgroundColor: "#000",
               color: "#fff",
-              hover: {
-                backgroundColor: "#000",
-                color: "#FFF",
-                width:"100%"
-              },
+              backgroundColor: "#000",
+              padding: "7px",
+              borderRadius: "5px",
             }}
             onClick={() => {
               getProducts();
             }}
             variant="outlined"
           >
-            <span
-              style={{
-                backgroundColor: "#000",
-                color: "#fff",
-                hover: {
-                  backgroundColor: "#000",
-                  color: "#FFF",
-                  width: "100%",
-                },
-              }}
-            >
-              All
-            </span>
-          </Button>
+            All
+          </button>
           {categories.map((cat) => {
             return (
-              <Button
-                sx={{
-                  padding: "10px",
-                  fontSize: "15px",
+              <button
+                style={{
+                  padding: "7px",
+                  fontSize: "17px",
                   minWidth: "190px",
                   marginTop: { xs: "25px" },
+                  color: "#fff",
+                  backgroundColor: "#000",
+                  padding: "7px",
+                  borderRadius: "5px",
                 }}
                 key={cat}
                 variant="outlined"
@@ -103,10 +92,10 @@ function Products() {
                 }}
               >
                 {cat}
-              </Button>
+              </button>
             );
           })}
-        </Box>
+        </div>
         <Box sx={{ marginTop: "50px" }}>
           {products.length > 0 ? (
             <Stack

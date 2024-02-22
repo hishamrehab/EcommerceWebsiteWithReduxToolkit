@@ -138,20 +138,31 @@ export const Product = ({ product, showButton }) => {
                 Add TO Cart
               </span>
             </Button>
-            <Button>
-              {showButton && (
-                <Link
+
+            {showButton && (
+              <Link
+                style={{
+                  textDecoration: "none",
+                  fontSize: "18px",
+                  marginLeft: "30px",
+                }}
+                to={`/product/${product.id}`}
+              >
+                <button
                   style={{
-                    textDecoration: "none",
-                    fontSize: "18px",
-                    marginLeft: "30px",
+                    color: "#000",
+                    backgroundColor: "#EBF400",
+                    padding: "7px",
+                    paddingRight: "7px",
                   }}
-                  to={`/product/${product.id}`}
+                  onClick={{
+                    scrollY,
+                  }}
                 >
                   Details
-                </Link>
-              )}
-            </Button>
+                </button>
+              </Link>
+            )}
           </CardActions>
         </Card>
       </Stack>

@@ -35,7 +35,6 @@ const ProductDetail = () => {
     <Container>
       <Stack
         sx={{
-          position: "relative",
           marginTop: "50px",
         }}
       >
@@ -44,17 +43,18 @@ const ProductDetail = () => {
             marginBottom: "40px",
             marginRight: "auto",
             marginLeft: "auto",
-
             height: "550px",
+            display: "flex",
+            alignItems: "center",
+            marginTop: "50px",
           }}
         >
           <Box>
             <img
               src={product.image}
-              width="300px"
-              height={"400px"}
+              width="500px"
+              height={"350px"}
               style={{
-                position: "absolute",
                 top: "50px",
                 left: "0",
               }}
@@ -63,7 +63,7 @@ const ProductDetail = () => {
 
           <CardContent
             sx={{
-              marginLeft: "400px",
+              marginLeft: "70px",
             }}
           >
             <Typography
@@ -111,14 +111,7 @@ const ProductDetail = () => {
             >
               price : {product.price}$
             </Typography>
-          </CardContent>
 
-          <CardActions
-            sx={{
-              marginBottom: "10px",
-              alignItems: "baseline",
-            }}
-          >
             <Button
               size="small"
               onClick={() =>
@@ -141,8 +134,7 @@ const ProductDetail = () => {
                   backgroundColor: "#000",
                   fontSize: "12px",
                   padding: "10px",
-                  marginLeft: "500px",
-                  marginTop: "50px",
+                  marginTop: "25px",
                   hover: {
                     "&:hover": {
                       backgroundColor: "#000",
@@ -158,7 +150,7 @@ const ProductDetail = () => {
             <Button>
               {showButton && <Link to={`/product/${product.id}`}>Details</Link>}
             </Button>
-          </CardActions>
+          </CardContent>
         </Card>
       </Stack>
     </Container>
