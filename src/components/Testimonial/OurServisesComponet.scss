@@ -1,0 +1,22 @@
+.our-services {
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  .our-services-icon {
+    color: var(--salmon-pink);
+    transition: .5s;
+  }
+  .our-services-icon:hover {
+    color: #000;
+  }
+  .our-services-title {
+    font-size: var(--fs-5);
+    color: var(--davys-gray);
+  }
+
+  .our-services-price {
+    color: var(--spanish-gray);
+    font-size: var(--fs-5);
+  }
+}

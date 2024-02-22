@@ -6,6 +6,8 @@ import NewArrivals from "../components/FaturedProducts/NewArrivals";
 import TrendingProducts from "../components/FaturedProducts/TrendingProducts";
 import Toprated from "../components/FaturedProducts/Toprated";
 import Dealoftheday from "../components/bestSellers/DealOfTheDay";
+import Testimonial from "../components/Testimonial/Testimonial";
+import FashionCards from "../components/FashionCards/FashionCards";
 const HomePage = () => {
   return (
     <div>
@@ -16,6 +18,8 @@ const HomePage = () => {
       <Toprated />
       <Products />
       <Dealoftheday />
+      <Testimonial />
+      <FashionCards />
     </div>
   );
 };

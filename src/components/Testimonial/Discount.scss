@@ -1,0 +1,44 @@
+.category-banner {
+  position: relative;
+
+  .category-banner-img {
+    width: 550px;
+    height: 500px;
+    border-radius: 20px;
+  }
+  .category-banner-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+
+    .category-banner-discount {
+      color: #fff;
+      background-color: black;
+      padding: 5px;
+
+      margin: auto;
+    }
+    .category-banner-collection {
+      color: #000;
+      padding: 10px;
+      margin-left: 5px;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .category-banner-price {
+      color: var(--davys-gray);
+      padding: 5px;
+      text-align: center;
+      font-size: 20px;
+    }
+    .category-banner-button {
+      color: var(--spanish-gray);
+      padding: 5px;
+      margin: auto;
+    }
+  }
+}
