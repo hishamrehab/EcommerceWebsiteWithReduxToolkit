@@ -4,15 +4,10 @@ import { Container } from "@mui/material";
 import payment from "../../../images/products/payment.png";
 const Footer = () => {
   return (
-    <div
-      style={{
-        backgroundColor: "hsl(0, 0%, 27%)",
-        height: "100%",
-      }}
-    >
+    <div>
       <Container>
-        <div className="brand Directory">
-          <h1>BRAND DIRECTORY</h1>
+        <div className="brand-directory">
+          <h6 className="brand-title">BRAND DIRECTORY</h6>
           <div className="fashion">
             T-Shirt: Shirts | Shorts & Jeans | Jacket | Dress & Frock |
             InnerWear | Hosiery

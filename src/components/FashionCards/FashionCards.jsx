@@ -11,36 +11,37 @@ const FashionCards = () => {
       <div
         style={{
           display: "flex",
-          gap: "30px",
+          gap: "25px",
           flexWrap: "wrap",
           alignItems: "center",
+       
         }}
       >
         <FashionCard
           img={blog1}
           title="Fashion"
           desc="Clothes Retail KPIs 2021 Guide for Clothes Executives"
-          admin="By Mr Admin / Apr 06, 2022"
+          admin="By Mr Admin / Apr 06, 2024"
         />
 
         <FashionCard
           img={blog2}
-          title="Fashion"
-          desc="Clothes Retail KPIs 2021 Guide for Clothes Executives"
-          admin="By Mr Admin / Apr 06, 2022"
+          title="Clothes"
+          desc="Curbside fashion Trends: How to Win the Pickup Battle."
+          admin="By Mr Robin / Jan 18, 2024"
         />
 
         <FashionCard
           img={blog3}
-          title="Fashion"
+          title="Shoes"
           desc="Clothes Retail KPIs 2021 Guide for Clothes Executives"
-          admin="By Mr Admin / Apr 06, 2022"
+          admin="By Mr Admin / Apr 06, 2024"
         />
         <FashionCard
           img={blog4}
-          title="Fashion"
-          desc="Clothes Retail KPIs 2021 Guide for Clothes Executives"
-          admin="By Mr Admin / Apr 06, 2022"
+          title="Electronics"
+          desc="EBT vendors: Claim Your Share of SNAP Online Revenue."
+          admin="By Mr Selsa / Feb 10, 2022"
         />
       </div>
     </Container>

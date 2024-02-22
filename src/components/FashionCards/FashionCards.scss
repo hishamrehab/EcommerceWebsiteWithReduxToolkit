@@ -1,0 +1,22 @@
+.fashion-card {
+  width: 250px;
+  margin-bottom: 20px;
+  .fashion-card-img {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .fashion-card-title {
+    color: var(--salmon-pink);
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .fashion-card-desc {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .fashion-card-desc:hover {
+    color: var(--salmon-pink);
+  }
+}
