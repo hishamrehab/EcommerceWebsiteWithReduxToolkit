@@ -35,8 +35,10 @@ import watch2 from "../images/products/watch-2.jpg";
 import watch3 from "../images/products/watch-3.jpg";
 import watch4 from "../images/products/watch-4.jpg";
 
-
-import jewellery from "../images/products/jewellery-1.jpg";
+import shoes9 from "../images/products/1.jpg";
+import shirt10 from "../images/products/2.jpg";
+import jacket11 from "../images/products/3.jpg";
+import hat3 from "../images/products/4.jpg";
 
 export const sliders = [
   {
@@ -373,7 +375,7 @@ export const rating = [
 
   {
     id: 37,
-    image: jewellery,
+    image: jewelry,
     title: "Casual Men's Brown Sh...",
     subtitle: "Casual",
     price: "55",
@@ -386,5 +388,40 @@ export const rating = [
     subtitle: "Formal",
     price: "56.00",
     deletedPrice: "75",
+  },
+];
+
+export const bestsellers = [
+  {
+    id: 35,
+    image: shoes9,
+    title: "Baby Fabric Shoes",
+    rating: "3",
+    price: "78",
+    deletedPrice: "100",
+  },
+  {
+    id: 36,
+    image: shirt10,
+    title: "Men's Hoodies T-Shirt",
+    rating: "3.5",
+    price: "88",
+    deletedPrice: "100",
+  },
+  {
+    id: 37,
+    image: jacket11,
+    title: "Men's Hoodies T-Shirt",
+    rating: "4",
+    price: "88",
+    deletedPrice: "100",
+  },
+  {
+    id: 38,
+    image: hat3,
+    title: "Woolen Hat For Men",
+    rating: "5",
+    price: "45",
+    deletedPrice: "30",
   },
 ];
