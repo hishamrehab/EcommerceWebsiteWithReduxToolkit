@@ -2,6 +2,11 @@ import React from "react";
 import "./Footer.css";
 import { Container } from "@mui/material";
 import payment from "../../../images/products/payment.png";
+import FooterLinks from "./FooterLinks";
+import PlaceIcon from "@mui/icons-material/Place";
+import CallIcon from "@mui/icons-material/Call";
+import MarkunreadIcon from "@mui/icons-material/Markunread";
+
 const Footer = () => {
   return (
     <div className="footer-section">
@@ -37,86 +42,68 @@ const Footer = () => {
 
         <div className="Footer-second-section">
           <div className="top">
-            <div className="item">
-              <h5>POPULAR CATEGORIES</h5>
-              <span>Prices Drop</span>
-              <span>New Products</span>
-              <span>Best Sales</span>
-              <span>Contact Us</span>
-              <span>Watches</span>
-            </div>
-            <div className="item">
-              <h1>PRODUCTS</h1>
-              <span>FAQ</span>
-              <span>Pages</span>
-              <span>Store</span>
-              <span>Compare</span>
-              <span>Cookies</span>
+            <div>
+              <FooterLinks
+                itemTitle={"POPULAR CATEGORIES"}
+                item1={"Fashion"}
+                item2={"Electronic"}
+                item3={"Cosmetic"}
+                item4={"Health"}
+                item5={"Watches"}
+              />
             </div>
 
-            <div className="item">
-              <h1>OurCOMPANY</h1>
-              <span>Delivery</span>
-              <span>Legal Notice</span>
-              <span>Terms And Conditions</span>
-              <span>About Us</span>
-              <span>Secure Payment</span>
+            <div>
+              <FooterLinks
+                itemTitle={"PRODUCTS"}
+                item1={"Prices Drop"}
+                item2={"New Products"}
+                item3={"Best Sales"}
+                item4={"Contact Us"}
+                item5={"Sitemap"}
+              />
             </div>
 
-            <div className="item">
-              <h1>SERVICES</h1>
-              <span>Prices Drop</span>
-              <span>New Products</span>
-              <span>Best Sales</span>
-              <span>Contact Us</span>
-              <span>Sitemap</span>
+            <div>
+              <FooterLinks
+                itemTitle={"OUR COMPANY"}
+                item1={"Delivery"}
+                item2={"Legal Notice"}
+                item3={"Terms And Conditions"}
+                item4={"About Us"}
+                item5={"Secure Payment"}
+              />
             </div>
 
-            <div className="item">
-              <h1>Contact</h1>
-              <span>
-                419 State 414 Rte Beaver Dams, New York(NY), 14812, USA
-              </span>
-              <span> 01211463479</span>
-              <span>hishamrehab309@gmail.com</span>
-            </div>
-            <div className="item">
-              <h1>Follow Us</h1>
-              <span></span>
-              <span> </span>
-              <span></span>
+            <div>
+              <FooterLinks
+                itemTitle={"SERVICES"}
+                item1={"Prices Drop"}
+                item2={"New Products"}
+                item3={"Best Sales"}
+                item4={"Contact Us"}
+                item5={"Sitemap"}
+              />
             </div>
 
-            <div className="item">
-              <h1>About</h1>
-              <span>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Facere, a debitis. At voluptatibus corporis ea ratione rem
-                minima suscipit error doloremque placeat. Eveniet tempore
-                facilis voluptatem cupiditate, deleniti debitis magni!
-              </span>
-            </div>
-            <div className="item">
-              <h1>Contact</h1>
-              <span>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Facere, a debitis. At voluptatibus corporis ea ratione rem
-                minima suscipit error doloremque placeat. Eveniet tempore
-                facilis voluptatem cupiditate, deleniti debitis magni!
-              </span>
+            <div>
+              <FooterLinks
+                itemTitle={"CONTACT"}
+                item8={
+                  "419 State 414 Rte Beaver Dams, New York(NY), 14812, USA"
+                }
+                icon1={<PlaceIcon />}
+                item9={"(607) 936-8058New Products"}
+                icon2={<CallIcon />}
+                item10={"Example@Gmail.Com"}
+                icon3={<MarkunreadIcon />}
+              />
             </div>
           </div>
 
           <div className="bottom">
             <div className="right">
-              <img
-                src={payment}
-                style={{
-                  width: "300px",
-                  height: "30px",
-                  margin: "auto",
-                }}
-              />
+              <img src={payment} className="footer-img"/>
             </div>
             <div className="left">
               <span className="copyright">

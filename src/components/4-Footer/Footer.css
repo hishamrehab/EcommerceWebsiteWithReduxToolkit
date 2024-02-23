@@ -68,6 +68,70 @@
       }
     }
   }
-}
+  .Footer-second-section {
+    .top {
+      .item {
+        line-height: 0.7;
 
+        .item-title {
+          color: var(--cultured);
+          position: relative;
+          padding-bottom: 10px;
+        }
+        .border-title {
+          content: "";
+          width: 60px;
+          height: 1px;
+          background-color: var(--salmon-pink);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        .item-links {
+          color: var(--eerie-black);
+          cursor: pointer;
+          transition: 0.3s;
+          .icon {
+            font-size: 40px;
+            margin-right: 5px;
+          }
+        }
+        .item-links:hover {
+          color: var(--salmon-pink);
+        }
+      }
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 50px;
+      padding-top: 15px;
+      margin-bottom: 20px;
+
+      .contactUs {
+        padding-top: 0;
+        margin-top: 0;
+      }
+    }
+    .bottom {
+      .right {
+        .footer-img {
+          margin: auto;
+          margin-bottom: 25px;
+          height: 30px;
+        }
+      }
+      .left {
+        .copyright {
+          font-size: 20px;
+          text-align: center;
+          padding-bottom: 25px;
+       margin-left: 35%;
+        }
+      }
+    }
+  }
+}
 /* ./Footer */
