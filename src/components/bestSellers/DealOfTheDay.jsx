@@ -17,22 +17,11 @@ const Dealoftheday = () => {
         justifyContent: "space-between",
         alignItems: "center",
         gap: "20px",
-        paddingRight: "5%",
-        paddingLeft: "5%",
         flexWrap: "wrap",
+        padding:"0 10px"
       }}
     >
-      <div
-        className="bestsellers"
-        style={{
-          width: {
-            md: "35%",
-            sm: "100%",
-            xs: "100%",
-          },
-          margin: "auto",
-        }}
-      >
+      <div className="bestsellers">
         <h3 className="bestsellers-title">Best Sellers</h3>
         <div className="bestsellers-content">
           {bestsellers.map((sale) => {
@@ -45,7 +34,7 @@ const Dealoftheday = () => {
                   gap: "15px",
                 }}
               >
-                <img src={sale.image} alt="" width={"80px"} />
+                <img src={sale.image} alt="" width={"100px"} />
                 <div>
                   <h4 className="subtitle">{sale.title}</h4>
                   <Rating

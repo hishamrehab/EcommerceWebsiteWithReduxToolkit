@@ -103,7 +103,7 @@ const Footer = () => {
 
           <div className="bottom">
             <div className="right">
-              <img src={payment} className="footer-img"/>
+              <img src={payment} className="footer-img" />
             </div>
             <div className="left">
               <span className="copyright">

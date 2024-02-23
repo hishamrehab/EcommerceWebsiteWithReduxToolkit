@@ -2,7 +2,7 @@
   position: relative;
 
   .category-banner-img {
-    width: 550px;
+    width: 650px;
     height: 500px;
     border-radius: 20px;
   }
@@ -39,6 +39,18 @@
       color: var(--spanish-gray);
       padding: 5px;
       margin: auto;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 768px) {
+  .category-banner {
+    .category-banner-img {
+      display: none;
+    }
+    .category-banner-info {
+      display: none;
     }
   }
 }

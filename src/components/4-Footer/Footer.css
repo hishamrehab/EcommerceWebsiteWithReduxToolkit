@@ -62,6 +62,7 @@
     }
     .fashion {
       color: hsl(0, 2%, 47%);
+      margin-bottom: 20px;
       .fristword {
         color: var(--spanish-gray);
         margin-right: 15px;
@@ -72,6 +73,8 @@
     .top {
       .item {
         line-height: 0.7;
+        font-size: 17px;
+        margin-top: 15px;
 
         .item-title {
           color: var(--cultured);
@@ -113,6 +116,7 @@
       .contactUs {
         padding-top: 0;
         margin-top: 0;
+     
       }
     }
     .bottom {
@@ -128,7 +132,7 @@
           font-size: 20px;
           text-align: center;
           padding-bottom: 25px;
-       margin-left: 35%;
+          margin-left: 35%;
         }
       }
     }

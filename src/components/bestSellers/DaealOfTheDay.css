@@ -52,14 +52,48 @@
         display: flex;
         align-items: center;
         gap: 15px;
-         color: var(--spanish-gray); 
+        color: var(--spanish-gray);
       }
     }
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
+  /* best sellers section */
+  .bestsellers {
+    margin-bottom: 15px;
+    .bestsellers-title {
+      font-size: var(--fs-3);
+      margin-left: 20px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+    .bestsellers-content {
+      .bestsellers-info {
+        margin-bottom: 20px;
+        img {
+          margin-bottom: 10px;
+        }
+        .subtitle {
+          font-size: var(--fs-4);
+        }
+        .rating {
+          font-size: 18px;
+        }
+        .prices {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          color: var(--spanish-gray);
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
   .my-swipper {
     width: 100%;
     height: 100%;
@@ -87,7 +121,7 @@
     width: 100%;
     height: 100px;
     object-fit: contain;
-    margin-right:80px;
+    margin-right: 80px;
   }
   .bestsellers-info {
     margin-left: 80px;
@@ -101,19 +135,4 @@
       font-size: 5px;
     }
   }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 992px) {
-
-  .bestsellers {
-  width: 100%;
-  .bestsellers-content {
-   width: 100%;
-.bestsellers-info {
-  width: 100%;
-}
-  }
-
-}
 }

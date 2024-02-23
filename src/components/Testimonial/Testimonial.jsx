@@ -11,9 +11,11 @@ const Testimonial = () => {
         style={{
           display: "flex",
           alignItems: "center",
-          gap:"15px",
-          flexWrap: "nowrap",
-          marginBottom:"60px"
+          gap: "20px",
+          flexWrap: "wrap",
+          flexDirection: "row",
+          marginBottom: "60px",
+          justifyContent: "space-between",
         }}
       >
         <div>

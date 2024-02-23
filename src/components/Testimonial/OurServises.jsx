@@ -1,5 +1,5 @@
 import React from "react";
-import  OurServicesComponet from "./OurServicesComponet";
+import OurServicesComponet from "./OurServicesComponet";
 import "./OurServises.scss";
 const OurServises = () => {
   return (
@@ -12,9 +12,11 @@ const OurServises = () => {
         <div>
           <OurServicesComponet />
         </div>
+
         <div>
           <OurServicesComponet />
         </div>
+
         <div>
           <OurServicesComponet />
         </div>

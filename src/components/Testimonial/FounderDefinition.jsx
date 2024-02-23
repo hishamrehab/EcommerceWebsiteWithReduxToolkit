@@ -3,7 +3,7 @@ import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import "./FounderDefinition.scss";
 const FounderDefinition = () => {
   return (
-    <>
+    <div>
       <div className="founder-title">
         <p>Testimonial</p>
       </div>
@@ -27,10 +27,10 @@ const FounderDefinition = () => {
         </h4>
         <p className="founder-desc">
           Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit
-          amet.{" "}
+          amet.
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

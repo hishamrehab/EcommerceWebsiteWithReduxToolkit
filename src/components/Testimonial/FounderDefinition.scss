@@ -5,7 +5,7 @@
 }
 
 .founder-definition {
-  width: 250px;
+  width: 260px;
   border: 1px solid hsl(0, 19%, 92%);
   padding: 25px;
   .founder-image {
@@ -31,4 +31,19 @@
   .founder-desc {
     color: var(--spanish-gray);
   }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 778px) {
+  .founder-title {
+ margin-left: 20px;
+}
+.founder-definition {
+    width: 320px;
+    border: 1px solid hsl(0, 19%, 92%);
+    padding: 25px;
+
+    margin-left: 30px;
+  }
+
 }

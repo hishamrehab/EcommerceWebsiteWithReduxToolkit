@@ -1,7 +1,8 @@
 .our-services-main {
+  max-width: 290px;
   padding: 10px;
+  margin: auto;
 
-  min-width: 25%;
   .our-services-mainTitle {
     font-size: var(--fs-2);
     border-bottom: 1px solid #d8d5d5;
@@ -17,5 +18,12 @@
     margin-top: 25px;
     flex-wrap: wrap;
     gap: 30px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .our-Services-container {
+   width: 320px;
+   margin-left: 25px;
   }
 }

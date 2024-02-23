@@ -42,7 +42,6 @@ function Products() {
           borderBottom: "1px solid #3d3d3d",
           width: "250px",
           margin: "auto",
-          
         }}
       >
         Our Products
@@ -73,6 +72,7 @@ function Products() {
               color: "#fff",
               backgroundColor: "hsl(353, 100%, 78%)",
               borderRadius: "5px",
+              marginTop: "35px",
             }}
             onClick={() => {
               getProducts();

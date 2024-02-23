@@ -14,7 +14,8 @@ const FashionCards = () => {
           gap: "25px",
           flexWrap: "wrap",
           alignItems: "center",
-        justifyContent:"space-between"     
+          justifyContent: "space-between",
+       
         }}
       >
         <FashionCard
