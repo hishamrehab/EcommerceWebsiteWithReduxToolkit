@@ -35,7 +35,6 @@ const Slider = () => {
                 Shop now
               </a>
             </div>{" "}
-            *
           </SwiperSlide>
         );
       })}

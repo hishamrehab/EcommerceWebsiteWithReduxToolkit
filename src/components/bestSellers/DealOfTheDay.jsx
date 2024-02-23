@@ -16,16 +16,21 @@ const Dealoftheday = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-
-        gap: "30px",
+        gap: "20px",
         paddingRight: "5%",
         paddingLeft: "5%",
+        flexWrap: "wrap",
       }}
     >
       <div
         className="bestsellers"
         style={{
-          width: "35%",
+          width: {
+            md: "35%",
+            sm: "100%",
+            xs: "100%",
+          },
+          margin: "auto",
         }}
       >
         <h3 className="bestsellers-title">Best Sellers</h3>
@@ -63,9 +68,13 @@ const Dealoftheday = () => {
       </div>
 
       <div className="my-swipper">
-      <h5
+        <h5
           style={{
             marginBottom: "15px",
+            marginLeft: {
+              xs: "20px",
+              sm: "20px",
+            },
           }}
         >
           Deal Of The Day
@@ -76,17 +85,23 @@ const Dealoftheday = () => {
             borderRadius: "10px",
             marginBottom: "50px",
             border: "1px solid hsl(0, 0%, 93%)",
+            height: {
+              xs: "1500px",
+              sm: "1500px",
+            },
           }}
         >
           {dealoftheday.map((deal) => {
             return (
               <SwiperSlide key={deal.id}>
                 <div
+                  className="swiper-slide"
                   style={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
-                    gap: "30px",
+                    gap: "20px",
+                    flexWrap: "wrap",
                   }}
                 >
                   <img src={deal.image} />
@@ -94,8 +109,12 @@ const Dealoftheday = () => {
                   <div
                     className="swiperSlide-info"
                     style={{
-                      mixWidth: "60%",
+                      maxWidth: "60%",
                       paddingRight: "15px",
+                      width: {
+                        xs: "100%",
+                        sm: "100%",
+                      },
                     }}
                   >
                     <Rating
@@ -146,6 +165,7 @@ const Dealoftheday = () => {
                         </del>
                       </span>
                       <h6
+                        className="post"
                         style={{
                           fontSize: "13px",
                           fontWeight: "bold",
@@ -154,11 +174,12 @@ const Dealoftheday = () => {
                         HURRY UP! OFFER ENDS IN:
                       </h6>
                       <div
+                        className="daley"
                         style={{
                           display: "flex",
                           alignItems: "center",
                           gap: "20px",
-                          marginTop: "15px",
+                          marginTop: "10px",
                         }}
                       >
                         <FixeTimar time={"24"} name={"Hours"} />

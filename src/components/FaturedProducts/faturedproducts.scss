@@ -7,7 +7,6 @@
       border-bottom: 1px solid #dbd7d7;
       margin: auto;
       padding: 10px;
-   
     }
   }
   .showcase-wrapper {
@@ -25,7 +24,7 @@
       .showcase {
         position: relative;
         border: 1px solid #dbd7d7;
-     
+
         padding: 10px;
         border-radius: 10px;
         width: 320px;
@@ -65,4 +64,13 @@
       }
     }
   }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .product-minimal {
+    // margin-right: auto;
+    margin: auto;
+   
+}
 }

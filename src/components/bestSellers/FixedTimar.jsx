@@ -4,10 +4,20 @@ const fixedTimar = ({ time, name }) => {
   return (
     <div
       style={{
-        backgroundColor: " hsl(0, 0%, 60%)",
-        width: "60px",
-        borderRadius: "10px",
-        marginLeft: "30px",
+        backgroundColor: "hsl(0, 0%, 60%)",
+        width: "50px",
+        borderRadius: "5px",
+        marginLeft: {
+           xs: "25px",
+          sm: "25px",
+  
+         
+        },
+    
+        padding: "5px",
+        marginBottom: "15px",
+        paddingBottom: "20px",
+        height: "50px",
       }}
     >
       <p>{time}</p>

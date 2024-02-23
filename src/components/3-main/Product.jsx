@@ -152,8 +152,9 @@ export const Product = ({ product, showButton }) => {
                   style={{
                     color: "#000",
                     backgroundColor: "#EBF400",
-                    padding: "7px",
-                    paddingRight: "7px",
+                    padding: "8px",
+
+                    width: "100px",
                   }}
                   onClick={{
                     scrollY,

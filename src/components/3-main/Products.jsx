@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Product from "./Product";
 import { Box, Container, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
+import "./ProductSection.css";
 
 function Products() {
   const api_url = "https://fakestoreapi.com/products";
@@ -35,7 +36,17 @@ function Products() {
 
   return (
     <>
-      <h2 className="text-center p-3"> Our Products </h2>
+      <h2
+        className="text-center p-2"
+        style={{
+          borderBottom: "1px solid #3d3d3d",
+          width: "250px",
+          margin: "auto",
+          
+        }}
+      >
+        Our Products
+      </h2>
 
       <Container
         sx={{
@@ -43,26 +54,24 @@ function Products() {
         }}
       >
         <div
+          className="products-btns"
           style={{
             minWidth: "25px",
             display: "flex",
             flexWrap: "wrap",
             alignItems: "center",
-            alignContent: "center",
             justifyContent: "space-between",
-            marginLeft: { xs: "70px" },
-            marginRight: { sm: "30px" },
+            gap: "30px",
           }}
         >
           <button
+            className="all-btn"
             style={{
               padding: "7px",
               fontSize: "17px",
               minWidth: "190px",
-              marginTop: { xs: "25px" },
               color: "#fff",
-              backgroundColor: "#000",
-         
+              backgroundColor: "hsl(353, 100%, 78%)",
               borderRadius: "5px",
             }}
             onClick={() => {
@@ -76,14 +85,21 @@ function Products() {
             return (
               <button
                 style={{
-                  padding: "7px",
                   fontSize: "17px",
-                  minWidth: "190px",
-                  marginTop: { xs: "25px" },
+                  width: "190px",
                   color: "#fff",
-                  backgroundColor: "#000",
-                  padding: "7px",
+                  backgroundColor: "hsl(353, 100%, 78%)",
                   borderRadius: "5px",
+                  marginBottom: "20px",
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "50px",
+                  marginTop: "20px",
+                  textAlign: "center",
+                  padding: "7px",
+                  paddingLeft: "45px",
                 }}
                 key={cat}
                 variant="outlined"
@@ -96,6 +112,7 @@ function Products() {
             );
           })}
         </div>
+
         <Box sx={{ marginTop: "50px" }}>
           {products.length > 0 ? (
             <Stack
@@ -113,11 +130,11 @@ function Products() {
                   sx={{
                     display: "flex",
                     flexDirection: "row",
-                    // justifyContent: "space-between",
                     alignItems: "center",
-                    // gap: "10px",
                     justifyItems: "flex-start",
                     flexWrap: "wrap",
+                    marginRight: "auto",
+                    marginLeft: "auto",
                   }}
                 >
                   <>
