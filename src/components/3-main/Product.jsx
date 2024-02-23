@@ -23,7 +23,7 @@ export const Product = ({ product, showButton }) => {
         <Card
           sx={{
             boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
-            maxWidth: { md: "280px", sm: "250px", xs: "100%" },
+            maxWidth: { md: "320px", sm: "250px", xs: "100%" },
             height: "780px",
             marginBottom: "50px",
             paddingBottom: "20px",
