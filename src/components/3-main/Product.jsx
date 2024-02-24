@@ -94,8 +94,15 @@ export const Product = ({ product, showButton }) => {
                 readOnly
               />
             </Typography>
-            <Box>
+            <Box
+              sx={{
+                marginTop: "15px",
+                marginLeft: "50px",
+                fontSize: "20px",
+              }}
+            >
               <Button
+               
                 onClick={() =>
                   setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
                 }

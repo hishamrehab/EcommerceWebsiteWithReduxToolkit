@@ -15,10 +15,9 @@ export default function Cart() {
 
   const totalPrice = () => {
     let total = 0;
-    products.forEach((item) => (total += (item.quantity * item.price)));
-      return total.toFixed(2);
+    products.forEach((item) => (total += item.quantity * item.price));
+    return total.toFixed(2);
   };
-
 
   const theme = useTheme();
 
@@ -31,7 +30,7 @@ export default function Cart() {
         }}
       >
         <div className="cart d-flex space-between ">
-          <p className="cart-title">Cart</p>
+          <p className="cart-title">Products in your Cart</p>
         </div>
         <div className="container">
           <ul className="cart-list">
@@ -39,31 +38,53 @@ export default function Cart() {
               products.map((item) => {
                 return (
                   <li className="cart-item" key={item.id}>
-                    <img src={item.image} alt="" />
-                    <div className="item">
-                      <h1 className="item-title">{item.title}</h1>
-
-                      <p>{item.description.substring(0, 100)}</p>
-                      <div className="price">
-                        {item.quantity} x ${item.price}
-                      </div>
-
-                      <button
-                        className="delete"
-                        onClick={() =>
-                          dispatch(
-                            deleteFromCart({
-                              id: item.id,
-                            })
-                          )
-                        }
-                      >
-                        <FaTrash />
-                      </button>
+                    <div>
+                      <img src={item.image} alt="" />
                     </div>
-                    <div className="total">
-                      <span>SUBTOTAL</span>
-                      <span>$ {totalPrice()}</span>
+
+                    <div className="item">
+                      <h1
+                        className="item-title"
+                        style={{
+                          fontSize: "30px",
+                        }}
+                      >
+                        {item.title}
+                      </h1>
+
+                      <p>{item.description.substring(0, 80)}</p>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          gap: "20px",
+                        }}
+                      >
+                        <div
+                          className="price"
+                          style={{
+                            fontWeight: "bold",
+                            color: "hsl(353, 100%, 78%)",
+                            fontSize: "20px",
+                          }}
+                        >
+                          {item.quantity} x ${item.price}
+                        </div>
+
+                        <button
+                          className="delete"
+                          onClick={() =>
+                            dispatch(
+                              deleteFromCart({
+                                id: item.id,
+                              })
+                            )
+                          }
+                        >
+                          <FaTrash />
+                        </button>
+                      </div>
                     </div>
                   </li>
                 );
@@ -76,7 +97,10 @@ export default function Cart() {
                 className="reset"
                 onClick={() => dispatch(clearAllFromCart())}
                 style={{
-                  marginTop: "20px",
+                  backgroundColor: "hsl(353, 100%, 78%)",
+                  // marginTop: "20px",
+                  padding: "7px",
+                  borderRadius: "10px",
                 }}
               >
                 <span
@@ -84,6 +108,7 @@ export default function Cart() {
                   style={{
                     marginBottom: "20px",
                     marginRight: "20px",
+                    fontSize: "20px",
                   }}
                 >
                   Reset Cart
@@ -92,7 +117,40 @@ export default function Cart() {
               </button>
             )}
           </ul>
-          <button>PROCEED TO CHECKOUT</button>
+          <div
+            className="total"
+            style={{
+              marginRight: "100px",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "20px",
+                fontWeight: "bold",
+                marginRight: "30px",
+              }}
+            >
+              SUBTOTAL
+            </span>
+            <span
+              style={{
+                fontSize: "20px",
+                fontWeight: "bold",
+              }}
+            >
+              $ {totalPrice()}
+            </span>
+          </div>
+          <button
+            style={{
+              backgroundColor: "#B5C0D0",
+              marginTop: "px",
+              padding: "10px",
+              borderRadius: "5px",
+            }}
+          >
+            PROCEED TO CHECKOUT
+          </button>
         </div>
       </div>
     </>
