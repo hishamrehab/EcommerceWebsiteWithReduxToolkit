@@ -72,7 +72,7 @@ function Products() {
               color: "#fff",
               backgroundColor: "hsl(353, 100%, 78%)",
               borderRadius: "5px",
-              marginTop: "35px",
+              
             }}
             onClick={() => {
               getProducts();

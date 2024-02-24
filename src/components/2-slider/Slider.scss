@@ -112,50 +112,31 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
   .mySwiper {
-    
+    margin-right: 50px;
     .swiper-slide {
       position: relative;
-    
       .banner-img {
         display: none;
       }
       .banner-content {
-           
-  
-        margin-right: auto;
-           padding-right: 50px;
+        position: absolute;
+        left: 0px;
+        max-width: 80%;
+
         .banner-subtitle {
-          color: var(--salmon-pink);
-          font-size: 25px;
-          margin-right: 20px;
+          margin-right: 15px;
         }
         .banner-title {
-          font-size: 40px;
-       
-
           text-align: center;
-          margin: auto;
-          width: 100%;
-          margin-right: 40px;
-      
         }
         .banner-text {
-          font-size: 25px;
-          color: var(--sonic-silver);
-          margin-right: 20px;
+          margin-right: 15px;
         }
         .banner-btn {
-          color: var(--cultured);
-          background-color: var(--salmon-pink);
-          padding: 8px;
-          width: 130px;
-          margin-left: 10px;
-          border-radius: 10px;
-          margin-left: 25px;
+          margin-left: 50px;
+          margin-bottom: 15px;
         }
-        .banner-btn:hover {
-          background-color: #000;
-        }
+    
       }
     }
   }
