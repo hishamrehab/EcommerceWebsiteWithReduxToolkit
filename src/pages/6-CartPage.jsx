@@ -12,7 +12,16 @@ import { useTheme } from "@emotion/react";
 export default function Cart() {
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
+
+  const totalPrice = () => {
+    let total = 0;
+    products.forEach((item) => (total += (item.quantity * item.price)));
+      return total.toFixed(2);
+  };
+
+
   const theme = useTheme();
+
   return (
     <>
       <div
@@ -30,26 +39,32 @@ export default function Cart() {
               products.map((item) => {
                 return (
                   <li className="cart-item" key={item.id}>
-                    <img
-                      src={item.image}
-                      alt=""
-                      width="100%"
-                      height={"350px"}
-                    />
-                    <span className="cart-item-title">{item.title}</span>
-                    <span className="cart-item-price">{item.price}$</span>
-                    <button
-                      className="cart-item-icon"
-                      onClick={() =>
-                        dispatch(
-                          deleteFromCart({
-                            id: item.id,
-                          })
-                        )
-                      }
-                    >
-                      <FaTrash />
-                    </button>
+                    <img src={item.image} alt="" />
+                    <div className="item">
+                      <h1 className="item-title">{item.title}</h1>
+
+                      <p>{item.description.substring(0, 100)}</p>
+                      <div className="price">
+                        {item.quantity} x ${item.price}
+                      </div>
+
+                      <button
+                        className="delete"
+                        onClick={() =>
+                          dispatch(
+                            deleteFromCart({
+                              id: item.id,
+                            })
+                          )
+                        }
+                      >
+                        <FaTrash />
+                      </button>
+                    </div>
+                    <div className="total">
+                      <span>SUBTOTAL</span>
+                      <span>$ {totalPrice()}</span>
+                    </div>
                   </li>
                 );
               })
@@ -58,7 +73,7 @@ export default function Cart() {
             )}
             {products.length > 0 && (
               <button
-                className="ClearAllButton"
+                className="reset"
                 onClick={() => dispatch(clearAllFromCart())}
                 style={{
                   marginTop: "20px",
@@ -68,15 +83,16 @@ export default function Cart() {
                   className="clearAll"
                   style={{
                     marginBottom: "20px",
-                    marginRight:"20px"
+                    marginRight: "20px",
                   }}
                 >
-                  clear all
+                  Reset Cart
                 </span>{" "}
                 <ClearIcon />
               </button>
             )}
           </ul>
+          <button>PROCEED TO CHECKOUT</button>
         </div>
       </div>
     </>

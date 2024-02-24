@@ -14,7 +14,7 @@ import Rating from "@mui/material/Rating";
 
 export const Product = ({ product, showButton }) => {
   const [value, setValue] = useState(2);
-
+  const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
 
   return (
@@ -94,6 +94,17 @@ export const Product = ({ product, showButton }) => {
                 readOnly
               />
             </Typography>
+            <Box>
+              <Button
+                onClick={() =>
+                  setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
+                }
+              >
+                -
+              </Button>
+              {quantity}
+              <Button onClick={() => setQuantity((prev) => prev + 1)}>+</Button>
+            </Box>
           </CardContent>
 
           <CardActions
@@ -114,7 +125,7 @@ export const Product = ({ product, showButton }) => {
                     price: product.price,
                     description: product.description,
                     image: product.image,
-                    rating: product.rating.rate,
+                    quantity,
                   })
                 )
               }
