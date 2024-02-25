@@ -43,9 +43,13 @@ function Products() {
           margin: "auto",
         }}
       >
-        <span style={{
-          marginBottom:"20px"
-        }}>Our Products</span>
+        <span
+          style={{
+            marginBottom: "20px",
+          }}
+        >
+          Our Products
+        </span>
       </h2>
 
       <Container
@@ -90,7 +94,7 @@ function Products() {
               <button
                 style={{
                   fontSize: "17px",
-                  width: "190px",
+                  width: "200px",
                   color: "#fff",
                   backgroundColor: "hsl(353, 100%, 78%)",
                   borderRadius: "5px",

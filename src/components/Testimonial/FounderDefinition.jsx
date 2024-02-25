@@ -1,6 +1,7 @@
 import React from "react";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import "./FounderDefinition.scss";
+import founderImg from "../../../images/products/testimonial-1.jpg";
 const FounderDefinition = () => {
   return (
     <div>
@@ -9,7 +10,7 @@ const FounderDefinition = () => {
       </div>
       <div className="founder-definition">
         <img
-          src="../../../images/products/testimonial-1.jpg"
+          src={founderImg}
           className="founder-image"
           style={{
             margin: "auto",

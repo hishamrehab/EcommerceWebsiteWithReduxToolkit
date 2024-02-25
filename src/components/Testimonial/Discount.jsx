@@ -1,12 +1,10 @@
 import React from "react";
 import "./Discount.scss";
+import banner from "../../../images/products/cta-banner.jpg";
 const Discount = () => {
   return (
     <div className="category-banner">
-      <img
-        src="../../../images/products/cta-banner.jpg"
-        className="category-banner-img"
-      />
+      <img src={banner} className="category-banner-img" />
       <div className="category-banner-info">
         <button className="category-banner-discount">25% DISCOUNT</button>
         <h2 className="category-banner-collection">Summer Collection</h2>
