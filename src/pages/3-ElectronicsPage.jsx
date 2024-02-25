@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { ToggleButtonGroup } from "@mui/material";
-import { useTheme } from "@emotion/react";
+
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -20,7 +20,7 @@ import Product from "../components/3-main/Product";
 const ElectronicsPage = () => {
   const dispatch = useDispatch();
 
-  const theme = useTheme();
+
   const showButton = true;
   const [products, setProducts] = useState([]);
   const apiUrl_Electronics =

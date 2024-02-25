@@ -70,8 +70,7 @@
   text-align: center;
   align-content: center;
   justify-content: center;
-  /* margin-right: auto;
-  margin-left: auto; */
+ 
 }
 .cart-list .ClearAllButton:hover {
   background-color: #1cb6ca;

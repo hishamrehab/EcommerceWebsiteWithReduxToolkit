@@ -16,10 +16,10 @@ import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { Container } from "react-bootstrap";
 import Product from "../components/3-main/Product";
-//  import { useDispatch } from "react-redux";
+
 
 const JeweleryPage = () => {
-  const theme = useTheme();
+
   const showButton = true;
   const dispatch = useDispatch();
   const [products, setProducts] = useState([]);

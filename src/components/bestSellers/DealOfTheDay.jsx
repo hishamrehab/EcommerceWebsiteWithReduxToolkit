@@ -27,12 +27,16 @@ const Dealoftheday = () => {
           {bestsellers.map((sale) => {
             return (
               <div
+
+
                 className="bestsellers-info"
+
                 style={{
                   paddingLeft: "10px",
                   display: "flex",
                   gap: "15px",
                 }}
+                key={sale.id}
               >
                 <img src={sale.image} alt="" width={"100px"} />
                 <div>

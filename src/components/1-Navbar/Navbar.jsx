@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import logo from "../../../images/logo/logo.svg";
 import SideBar from "../sidebar/SideBar";
 import { Divider } from "@mui/material";
-// import SecondNavbar from "./SecondNavbar";
+
 
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -26,17 +26,11 @@ import "./Navbar.scss";
 
 import { styled, alpha } from "@mui/material/styles";
 import Button from "@mui/material/Button";
-// import MenuItem from "@mui/material/MenuItem";
-// import Nav from "react-bootstrap/Nav";
-import { useTheme } from "@emotion/react";
-// import { Link } from "react-router-dom";
+
 import { useContext } from "react";
-import { ColorModeContext } from "../../theme";
+
 import { useSelector } from "react-redux";
 
-// import logo from "../../../images/logo/logo.svg";
-
-// import IconButton from "@mui/material/IconButton";
 
 import InputBase from "@mui/material/InputBase";
 
@@ -58,15 +52,6 @@ function Navbar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const StyledBadge = styled(Badge)(({ theme }) => ({
-    "& .MuiBadge-badge": {
-      right: -3,
-      top: 13,
-      border: `2px solid ${theme.palette.background.paper}`,
-      padding: "0 4px",
-    },
-  }));
 
   return (
     <>

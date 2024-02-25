@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { ToggleButtonGroup } from "@mui/material";
-import { useTheme } from "@emotion/react";
+
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -15,7 +15,7 @@ import { Container } from "react-bootstrap";
 import Product from "../components/3-main/Product";
 
 const WomenPage = () => {
-  const theme = useTheme();
+
   const dispatch = useDispatch();
   const showButton = true;
   const [products, setProducts] = useState([]);

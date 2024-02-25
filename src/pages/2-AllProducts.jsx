@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { ToggleButtonGroup } from "@mui/material";
-import { useTheme } from "@emotion/react";
+
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -16,10 +16,10 @@ import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { Container } from "react-bootstrap";
 import Product from "../components/3-main/Product";
-//  import { useDispatch } from "react-redux";
+
 
 const AllProducts = () => {
-  const theme = useTheme();
+
   const dispatch = useDispatch();
   const [products, setProducts] = useState([]);
   const apiUrl_Jewelery = "https://fakestoreapi.com/products";

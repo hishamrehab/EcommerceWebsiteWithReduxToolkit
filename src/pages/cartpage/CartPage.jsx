@@ -7,7 +7,7 @@ import { FaTrash } from "react-icons/fa";
 import { deleteFromCart, clearAllFromCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import ClearIcon from "@mui/icons-material/Clear";
-import { useTheme } from "@emotion/react";
+
 
 export default function Cart() {
   const products = useSelector((state) => state.cart.products);
@@ -19,7 +19,7 @@ export default function Cart() {
     return total.toFixed(2);
   };
 
-  const theme = useTheme();
+
 
   return (
     <>
