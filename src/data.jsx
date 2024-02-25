@@ -156,7 +156,7 @@ export const sidebarCategories = [
 
   {
     id: 14,
-    image: jewelry,
+    image: sports4,
     mainTitle: "Jewelry",
 
     item1: "Earrings",
@@ -314,7 +314,7 @@ export const trending = [
   },
   {
     id: 30,
-    image: sports3,
+    image: sports5,
     title: "Sports Claw Women's Sh...",
     subtitle: "sports",
     price: "130",
@@ -376,7 +376,7 @@ export const rating = [
 
   {
     id: 37,
-    image: jewelry,
+    image: sports5,
     title: "Casual Men's Brown Sh...",
     subtitle: "Casual",
     price: "55",

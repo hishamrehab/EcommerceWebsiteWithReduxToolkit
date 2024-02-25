@@ -61,7 +61,8 @@
     scroll-snap-type: inline mandatory;
     overscroll-behavior-inline: contain;
     .category-item {
-      min-width: 100%;
+      margin-top: 15px;
+      min-width: 40%;
       display: flex;
       align-items: center;
       gap: 15px;
@@ -99,6 +100,33 @@
             }
           }
         }
+      }
+    }
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .category {
+    .category-item-container {
+      .category-item {
+        margin-top: 15px;
+        min-width: 50%;
+
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .category {
+    .category-item-container {
+      .category-item {
+        margin-top: 15px;
+        min-width: 100%;
+
+        text-transform: capitalize;
       }
     }
   }

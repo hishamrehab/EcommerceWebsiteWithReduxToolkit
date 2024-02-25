@@ -11,10 +11,10 @@ const FashionCards = () => {
       <div
         style={{
           display: "flex",
-          gap: "15px",
           flexWrap: "wrap",
           alignItems: "center",
-        justifyContent: "space-between",
+          justifyContent: "space-between",
+          
         }}
       >
         <FashionCard

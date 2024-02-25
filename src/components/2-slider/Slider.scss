@@ -72,6 +72,9 @@
 .mySwiper {
   .swiper-slide {
     position: relative;
+    width: 100%;
+    height: 100%;
+
     .banner-img {
       width: 100%;
       height: 100%;
@@ -112,31 +115,34 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
   .mySwiper {
-    margin-right: 50px;
+    width: 100%;
+
     .swiper-slide {
       position: relative;
       .banner-img {
-        display: none;
       }
       .banner-content {
         position: absolute;
         left: 0px;
-        max-width: 80%;
+        max-width: 100%;
 
         .banner-subtitle {
           margin-right: 15px;
+          font-size: 20px;
         }
         .banner-title {
           text-align: center;
+          font-size: 25px;
+          max-width: 290px;
         }
         .banner-text {
-          margin-right: 15px;
+          max-width: 250px;
+          font-size: 25px;
         }
         .banner-btn {
           margin-left: 50px;
           margin-bottom: 15px;
         }
-    
       }
     }
   }

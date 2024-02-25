@@ -1,7 +1,7 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Cart from "./pages/6-CartPage";
+import Cart from "./pages/cartpage/CartPage";
 
 import HomePage from "./pages/1-HomePAGE.JSX";
 import { useDispatch } from "react-redux";

@@ -24,7 +24,7 @@ export const Product = ({ product, showButton }) => {
           sx={{
             boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
             maxWidth: { md: "320px", sm: "250px", xs: "100%" },
-            height: "780px",
+            height: "810px",
             marginBottom: "50px",
             paddingBottom: "20px",
             border: "1px solid #777",
@@ -98,19 +98,45 @@ export const Product = ({ product, showButton }) => {
               sx={{
                 marginTop: "15px",
                 marginLeft: "50px",
-                fontSize: "20px",
+                fontSize: "25px",
+                display: "flex",
+
+                gap: "25px",
+                textAlign: "center",
               }}
             >
-              <Button
-               
+              <button
+                style={{
+                  backgroundColor: "#000",
+                  color: "#fff",
+                  width: "60px",
+                  height: "35px",
+                  fontSize: "25px",
+                  textAlign: "center",
+                  borderRadius: "5px",
+                }}
                 onClick={() =>
                   setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
                 }
               >
                 -
-              </Button>
+              </button>
+
               {quantity}
-              <Button onClick={() => setQuantity((prev) => prev + 1)}>+</Button>
+              <button
+                onClick={() => setQuantity((prev) => prev + 1)}
+                style={{
+                  backgroundColor: "#000",
+                  color: "#fff",
+                  width: "60px",
+                  height: "35px",
+                  fontSize: "25px",
+                  textAlign: "center",
+                  borderRadius: "5px",
+                }}
+              >
+                +
+              </button>
             </Box>
           </CardContent>
 
@@ -142,7 +168,7 @@ export const Product = ({ product, showButton }) => {
                   color: "#FFF",
                   backgroundColor: "#000",
                   fontSize: "12px",
-
+           marginLeft:"30px",
                   padding: "10px",
                   hover: {
                     "&:hover": {

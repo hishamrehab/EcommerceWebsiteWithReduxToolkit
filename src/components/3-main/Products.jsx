@@ -39,12 +39,13 @@ function Products() {
       <h2
         className="text-center p-2"
         style={{
-          borderBottom: "1px solid #3d3d3d",
           width: "250px",
           margin: "auto",
         }}
       >
-        Our Products
+        <span style={{
+          marginBottom:"20px"
+        }}>Our Products</span>
       </h2>
 
       <Container
@@ -72,7 +73,10 @@ function Products() {
               color: "#fff",
               backgroundColor: "hsl(353, 100%, 78%)",
               borderRadius: "5px",
-              
+              marginTop: {
+                sm: "20px",
+                xs: "20px",
+              },
             }}
             onClick={() => {
               getProducts();

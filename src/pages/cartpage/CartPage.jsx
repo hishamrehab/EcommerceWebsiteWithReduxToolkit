@@ -4,7 +4,7 @@ import { FaCartPlus } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
-import { deleteFromCart, clearAllFromCart } from "../redux/cartReducer";
+import { deleteFromCart, clearAllFromCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import ClearIcon from "@mui/icons-material/Clear";
 import { useTheme } from "@emotion/react";
@@ -98,16 +98,15 @@ export default function Cart() {
                 onClick={() => dispatch(clearAllFromCart())}
                 style={{
                   backgroundColor: "hsl(353, 100%, 78%)",
-                  // marginTop: "20px",
-                  padding: "7px",
+
                   borderRadius: "10px",
+                  textAlign: "center",
+                  padding: "10px",
                 }}
               >
                 <span
                   className="clearAll"
                   style={{
-                    marginBottom: "20px",
-                    marginRight: "20px",
                     fontSize: "20px",
                   }}
                 >
@@ -117,40 +116,55 @@ export default function Cart() {
               </button>
             )}
           </ul>
+
           <div
-            className="total"
             style={{
-              marginRight: "100px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              flexDirection: "row",
+              flexWrap: "wrap",
             }}
           >
-            <span
+            <div
+              className="total"
               style={{
-                fontSize: "20px",
-                fontWeight: "bold",
-                marginRight: "30px",
+                marginRight: "100px",
               }}
             >
-              SUBTOTAL
-            </span>
-            <span
-              style={{
-                fontSize: "20px",
-                fontWeight: "bold",
-              }}
-            >
-              $ {totalPrice()}
-            </span>
+              <span
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                  marginRight: "30px",
+                }}
+              >
+                SUBTOTAL
+              </span>
+              <span
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                }}
+              >
+                $ {totalPrice()}
+              </span>
+            </div>
+
+            {products.length > 0 && (
+              <button
+                style={{
+                  backgroundColor: "#B5C0D0",
+                  padding: "10px",
+                  borderRadius: "5px",
+                  textAlign: "center",
+                  marginTop: "20px",
+                }}
+              >
+                PROCEED TO CHECKOUT
+              </button>
+            )}
           </div>
-          <button
-            style={{
-              backgroundColor: "#B5C0D0",
-              marginTop: "px",
-              padding: "10px",
-              borderRadius: "5px",
-            }}
-          >
-            PROCEED TO CHECKOUT
-          </button>
         </div>
       </div>
     </>
