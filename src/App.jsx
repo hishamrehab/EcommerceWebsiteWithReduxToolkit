@@ -19,26 +19,23 @@ import SecondNavbar from "./components/1-navbar/SecondNavbar";
 function App() {
   return (
     <div className="app">
+      <CssBaseline />
+      <BrowserRouter>
+        <Navbar />
+        <SecondNavbar />
 
-        <CssBaseline />
-
-        <BrowserRouter>
-          <Navbar />
-          <SecondNavbar />
-
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<AllProducts />} />
-            <Route path="/jewelery" element={<JeweleryPage />} />
-            <Route path="/electronics" element={<ElectronicsPage />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/men" element={<Menpage />} />
-            <Route path="/women" element={<WomenPage />} />
-            <Route path="/product/:productId" element={<ProductDetail />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-  
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<AllProducts />} />
+          <Route path="/jewelery" element={<JeweleryPage />} />
+          <Route path="/electronics" element={<ElectronicsPage />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/men" element={<Menpage />} />
+          <Route path="/women" element={<WomenPage />} />
+          <Route path="/product/:productId" element={<ProductDetail />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

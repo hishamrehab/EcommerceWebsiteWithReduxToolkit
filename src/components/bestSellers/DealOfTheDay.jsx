@@ -143,7 +143,7 @@ const Dealoftheday = () => {
                           color: "hsl(353, 100%, 78)",
                           fontSize: "25px",
                           marginRight: "12px",
-                          color: " hsl(353, 100%, 78%)",
+                       
                         }}
                       >
                         {deal.price}$
