@@ -168,7 +168,7 @@ export const Product = ({ product, showButton }) => {
                   color: "#FFF",
                   backgroundColor: "#000",
                   fontSize: "12px",
-           marginLeft:"30px",
+                  marginLeft: "30px",
                   padding: "10px",
                   hover: {
                     "&:hover": {

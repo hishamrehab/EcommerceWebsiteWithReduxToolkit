@@ -14,10 +14,12 @@ import { addToCart } from "../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
-
+import "./productDetails.css";
 const ProductDetail = () => {
   const [product, setProduct] = useState({});
   const [value, setValue] = useState(2);
+  const [quantity, setQuantity] = useState(1);
+
   const dispatch = useDispatch();
   const showButton = false;
   const api_url = "https://fakestoreapi.com/products";
@@ -35,37 +37,33 @@ const ProductDetail = () => {
     <Container>
       <Stack
         sx={{
-          marginTop: "50px",
+          margin: "auto",
+          marginRight: "auto",
+          marginLeft: "auto",
         }}
       >
         <Card
           sx={{
-            marginBottom: "40px",
-            marginRight: "auto",
-            marginLeft: "auto",
-            height: "550px",
             display: "flex",
             alignItems: "center",
-            marginTop: "50px",
+            justifyContent: "space-between",
+            gap: "15px",
+            flexWrap: "wrap",
+            flexDirection: "row",
           }}
         >
-          <Box>
-            <img
-              src={product.image}
-              width="500px"
-              height={"350px"}
-              style={{
-                top: "50px",
-                left: "0",
-              }}
-            />
-          </Box>
-
-          <CardContent
+          <Box
             sx={{
-              marginLeft: "70px",
+              width: "300px",
+              height: "350px",
+              marginLeft: "auto",
+              marginRight: "auto",
             }}
           >
+            <img src={product.image} />
+          </Box>
+
+          <CardContent>
             <Typography
               gutterBottom
               variant="h5"
@@ -83,7 +81,6 @@ const ProductDetail = () => {
               color="text.secondary"
               sx={{
                 fontSize: "20px",
-                color: "#779",
               }}
             >
               ProductCategory : {product.category}
@@ -93,9 +90,10 @@ const ProductDetail = () => {
               variant="body2"
               color="text.secondary"
               sx={{
-                fontSize: "15px",
+                fontSize: "17px",
                 lineHeight: "25px",
                 marginTop: "15px",
+                marginBottom: "10px",
               }}
             >
               {product.description}
@@ -105,47 +103,12 @@ const ProductDetail = () => {
               variant="body2"
               color="text.secondary"
               sx={{
+                color: "hsl(353, 100%, 78%)",
                 fontSize: "20px",
-                marginTop: "10px",
               }}
             >
               price : {product.price}$
             </Typography>
-
-            <Button
-              size="small"
-              onClick={() =>
-                dispatch(
-                  addToCart({
-                    id: product.id,
-                    title: product.title,
-                    category: product.category,
-                    price: product.price,
-                    description: product.description,
-                    image: product.image,
-                    rating: product.rating.rate,
-                  })
-                )
-              }
-            >
-              <span
-                style={{
-                  color: "#FFF",
-                  backgroundColor: "#000",
-                  fontSize: "12px",
-                  padding: "10px",
-                  marginTop: "25px",
-                  hover: {
-                    "&:hover": {
-                      backgroundColor: "#000",
-                      color: "#FFF",
-                    },
-                  },
-                }}
-              >
-                Add To Cart
-              </span>
-            </Button>
 
             <Button>
               {showButton && <Link to={`/product/${product.id}`}>Details</Link>}
