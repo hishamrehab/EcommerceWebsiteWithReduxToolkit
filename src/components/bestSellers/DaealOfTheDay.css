@@ -36,11 +36,12 @@
 @media only screen and (max-width: 600px) {
   .my-swipper {
     width: 50%;
+    height: 600px;
   }
 
   .swiper {
     width: 100%;
-    height: 450px;
+    height: 600px;
     cursor: grab;
   }
 
@@ -48,10 +49,10 @@
     text-align: center;
     font-size: 18px;
     background: #fff;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 600px;
   }
 
   .swiper-slide img {
@@ -64,6 +65,7 @@
 /* best sellers section */
 .bestsellers {
   margin-bottom: 15px;
+  padding: 20px;
 
   .bestsellers-title {
     font-size: var(--fs-3);
@@ -105,7 +107,8 @@
     margin-bottom: 15px;
     margin: auto;
     width: 100%;
-    min-width: 350px;
+    padding: 20px;
+
     .bestsellers-title {
       font-size: var(--fs-3);
       margin-left: 20px;

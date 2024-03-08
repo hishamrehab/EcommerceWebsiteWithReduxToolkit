@@ -26,8 +26,8 @@ export const Product = ({ product, showButton }) => {
             maxWidth: { md: "320px", sm: "250px", xs: "100%" },
             height: {
               md: "800px",
-              sm: "810px",
-              xs: "850px",
+              sm: "830px",
+              xs: "900px",
             },
             marginBottom: "50px",
             paddingBottom: "20px",
