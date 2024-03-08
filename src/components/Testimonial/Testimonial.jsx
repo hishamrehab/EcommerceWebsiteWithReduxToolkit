@@ -18,13 +18,13 @@ const Testimonial = () => {
           justifyContent: "space-between",
         }}
       >
-        <div>
+        <div className="founder-part">
           <FounderDefinition />
         </div>
-        <div>
+        <div className="discount-part">
           <Discount />
         </div>
-        <div>
+        <div className="services-part" >
           <OurServises />
         </div>
       </div>

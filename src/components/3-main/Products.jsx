@@ -35,7 +35,7 @@ function Products() {
   }, []);
 
   return (
-    <>
+    <Container>
       <h2
         className="text-center p-2"
         style={{
@@ -60,12 +60,13 @@ function Products() {
         <div
           className="products-btns"
           style={{
-            minWidth: "25px",
+            // minWidth: "25px",
             display: "flex",
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "space-between",
-            gap: "30px",
+            gap: "20px",
+            minWidth: "150px",
           }}
         >
           <button
@@ -73,7 +74,7 @@ function Products() {
             style={{
               padding: "7px",
               fontSize: "17px",
-              minWidth: "190px",
+              width: "200px",
               color: "#fff",
               backgroundColor: "hsl(353, 100%, 78%)",
               borderRadius: "5px",
@@ -107,7 +108,7 @@ function Products() {
                   marginTop: "20px",
                   textAlign: "center",
                   padding: "7px",
-                  paddingLeft: "45px",
+                  paddingLeft: "50px",
                 }}
                 key={cat}
                 variant="outlined"
@@ -156,7 +157,7 @@ function Products() {
           )}
         </Box>
       </Container>
-    </>
+    </Container>
   );
 }
 

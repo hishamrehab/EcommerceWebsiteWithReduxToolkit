@@ -24,10 +24,15 @@ export const Product = ({ product, showButton }) => {
           sx={{
             boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
             maxWidth: { md: "320px", sm: "250px", xs: "100%" },
-            height: "810px",
+            height: {
+              md: "800px",
+              sm: "810px",
+              xs: "850px",
+            },
             marginBottom: "50px",
             paddingBottom: "20px",
             border: "1px solid #777",
+            marginRight: "20px",
           }}
         >
           <CardContent>
@@ -37,7 +42,7 @@ export const Product = ({ product, showButton }) => {
 
             <Typography
               gutterBottom
-              variant="h7"
+              variant="h5"
               component="div"
               sx={{
                 marginTop: "15px",
@@ -198,7 +203,7 @@ export const Product = ({ product, showButton }) => {
                     backgroundColor: "#EBF400",
                     padding: "8px",
 
-                    width: "100px",
+                    width: "70px",
                   }}
                   onClick={{
                     scrollY,

@@ -16,6 +16,7 @@ import ProductDetail from "./pages/8-ProductDetail";
 import AllProducts from "./pages/2-AllProducts";
 import Navbar from "./components/1-navbar/Navbar";
 import SecondNavbar from "./components/1-navbar/SecondNavbar";
+import { Container } from "react-bootstrap";
 function App() {
   return (
     <div className="app">

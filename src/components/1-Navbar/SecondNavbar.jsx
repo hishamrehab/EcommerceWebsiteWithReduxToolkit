@@ -44,12 +44,12 @@ const SecondNavbar = () => {
   }));
 
   return (
-    <div
-      style={{
-        borderBottom: "1px solid #d3d3d3",
-      }}
-    >
-      <Container>
+    <Container>
+      <div
+        style={{
+          borderBottom: "1px solid #d3d3d3",
+        }}
+      >
         <div
           className="navbar-icons"
           style={{
@@ -104,8 +104,8 @@ const SecondNavbar = () => {
             </IconButton>
           </div>
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 };
 

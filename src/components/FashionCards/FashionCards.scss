@@ -1,9 +1,9 @@
 .fashion-card {
-  width: 250px;
-  margin-left: 50px;
+  width: 270px;
+  // margin-left: 50px;
   margin-bottom: 20px;
   .fashion-card-img {
-    width: 300px;
+    width: 100%;
     height: 150px;
     border-radius: 10px;
     cursor: pointer;
@@ -19,5 +19,37 @@
   }
   .fashion-card-desc:hover {
     color: var(--salmon-pink);
+  }
+}
+
+
+
+.fashion-card {
+  width: 270px;
+  // margin-left: 50px;
+  margin-bottom: 20px;
+  .fashion-card-img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .fashion-card-title {
+    color: var(--salmon-pink);
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .fashion-card-desc {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .fashion-card-desc:hover {
+    color: var(--salmon-pink);
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .fashion-card {
+  width: 100%;
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./FooterLinks";
+import { Container } from "@mui/material";
 
 const FooterLinks = ({
   itemTitle,
@@ -16,54 +17,56 @@ const FooterLinks = ({
   item10,
 }) => {
   return (
-    <div className="item">
-      <p className="item-title">
-        {itemTitle}
-        <span className="border-title"></span>
-      </p>
-      <p className="item-links">{item1}</p>
-      <p className="item-links">{item2}</p>
-      <p className="item-links">{item3}</p>
-      <p className="item-links">{item4}</p>
-      <p className="item-links">{item5}</p>
+    <Container>
+      <div className="item">
+        <p className="item-title">
+          {itemTitle}
+          <span className="border-title"></span>
+        </p>
+        <p className="item-links">{item1}</p>
+        <p className="item-links">{item2}</p>
+        <p className="item-links">{item3}</p>
+        <p className="item-links">{item4}</p>
+        <p className="item-links">{item5}</p>
 
-      <p
-        className="item-links"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "15px",
-          lineHeight: "1.4",
-        }}
-      >
-        <span className="icon">{icon1}</span>
-        <span>{item8}</span>
-      </p>
-
-      <p className="item-links">
-        <span
-          className="icon"
+        <p
+          className="item-links"
           style={{
-            marginRight: "30px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "15px",
+            lineHeight: "1.4",
           }}
         >
-          {icon2}
-        </span>
-        <span>{item9}</span>
-      </p>
-      <p className="item-links">
-        <span
-          className="icon"
-          style={{
-            marginRight: "30px",
-          }}
-        >
-          {icon3}
-        </span>
-        <span>{item10}</span>
-      </p>
-    </div>
+          <span className="icon">{icon1}</span>
+          <span>{item8}</span>
+        </p>
+
+        <p className="item-links">
+          <span
+            className="icon"
+            style={{
+              marginRight: "30px",
+            }}
+          >
+            {icon2}
+          </span>
+          <span>{item9}</span>
+        </p>
+        <p className="item-links">
+          <span
+            className="icon"
+            style={{
+              marginRight: "30px",
+            }}
+          >
+            {icon3}
+          </span>
+          <span>{item10}</span>
+        </p>
+      </div>
+    </Container>
   );
 };
 

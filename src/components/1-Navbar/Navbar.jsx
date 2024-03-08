@@ -13,7 +13,6 @@ import logo from "../../../images/logo/logo.svg";
 import SideBar from "../sidebar/SideBar";
 import { Divider } from "@mui/material";
 
-
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -30,7 +29,6 @@ import Button from "@mui/material/Button";
 import { useContext } from "react";
 
 import { useSelector } from "react-redux";
-
 
 import InputBase from "@mui/material/InputBase";
 
@@ -54,7 +52,7 @@ function Navbar() {
   };
 
   return (
-    <>
+    <Container>
       <AppBar
         position="static"
         sx={{
@@ -182,7 +180,7 @@ function Navbar() {
           </Box>
         </Toolbar>
       </AppBar>
-    </>
+    </Container>
   );
 }
 export default Navbar;

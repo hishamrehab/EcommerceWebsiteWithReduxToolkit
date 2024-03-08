@@ -2,10 +2,15 @@
   padding: 3px;
   display: flex;
   align-items: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20pxs;
+
   gap: 15px;
   .our-services-icon {
     color: var(--salmon-pink);
-    transition: .5s;
+    transition: 0.5s;
   }
   .our-services-icon:hover {
     color: #000;
@@ -18,5 +23,36 @@
   .our-services-price {
     color: var(--spanish-gray);
     font-size: var(--fs-5);
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .our-services {
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20pxs;
+
+    gap: 15px;
+    .our-services-icon {
+      color: var(--salmon-pink);
+      transition: 0.5s;
+    }
+    .our-services-icon:hover {
+      color: #000;
+    }
+    .our-services-title {
+      font-size: var(--fs-5);
+      color: var(--davys-gray);
+    }
+
+    .our-services-price {
+      color: var(--spanish-gray);
+      font-size: var(--fs-5);
+    }
   }
 }

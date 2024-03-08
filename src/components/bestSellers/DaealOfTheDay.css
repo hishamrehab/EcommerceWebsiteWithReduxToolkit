@@ -20,14 +20,51 @@
 }
 
 .swiper-slide img {
-  width: 320px;
+  width: 200px;
   height: 90%;
   object-fit: contain;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .my-swipper {
+    width: 100%;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .my-swipper {
+    width: 50%;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 450px;
+    cursor: grab;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    width: 200px;
+    height: 90%;
+    object-fit: contain;
+  }
 }
 
 /* best sellers section */
 .bestsellers {
   margin-bottom: 15px;
+
   .bestsellers-title {
     font-size: var(--fs-3);
     margin-left: 20px;
@@ -39,6 +76,10 @@
 
     .bestsellers-info {
       padding-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
       img {
         margin-bottom: 10px;
       }
@@ -58,9 +99,52 @@
   }
 }
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .bestsellers {
+    margin-bottom: 15px;
+    margin: auto;
+    width: 100%;
+    min-width: 350px;
+    .bestsellers-title {
+      font-size: var(--fs-3);
+      margin-left: 20px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+
+    .swiper-slide img {
+      width: 200px;
+      height: 80%;
+      object-fit: contain;
+    }
+    .bestsellers-content {
+      .bestsellers-info {
+        margin-bottom: 20px;
+        img {
+          margin-bottom: 10px;
+        }
+        .subtitle {
+          font-size: var(--fs-4);
+        }
+        .rating {
+          font-size: 18px;
+        }
+        .prices {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          color: var(--spanish-gray);
+        }
+      }
+    }
+  }
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
   /* best sellers section */
+
   .bestsellers {
     margin-bottom: 15px;
     .bestsellers-title {
@@ -68,6 +152,12 @@
       margin-left: 20px;
       margin-bottom: 20px;
       margin-top: 10px;
+    }
+
+    .swiper-slide img {
+      width: 200px;
+      height: 80%;
+      object-fit: contain;
     }
     .bestsellers-content {
       .bestsellers-info {
