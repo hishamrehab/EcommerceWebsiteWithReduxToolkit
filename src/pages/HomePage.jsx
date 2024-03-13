@@ -1,6 +1,6 @@
 import React from "react";
 import Products from "../components/main/Products";
-import Slider from "../components/2-slider/Slider";
+import Slider from "../components/slider/Slider";
 import Category from "../components/category/Category";
 import NewArrivals from "../components/NewArrivals/NewArrivals";
 import TrendingProducts from "../components/TrendingProjects/TrendingProducts";
