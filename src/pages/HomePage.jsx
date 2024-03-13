@@ -11,17 +11,17 @@ import FashionCards from "../components/FashionCards/FashionCards";
 const HomePage = () => {
   return (
     <div>
-      <Slider />
+      {/* <Slider /> */}
 
-      <Category />
+      {/* <Category /> */}
 
-      <NewArrivals />
-      <TrendingProducts />
-      <Toprated />
-      <Products />
-      <Dealoftheday />
+      {/* <NewArrivals /> */}
+      {/* <TrendingProducts /> */}
+      {/* <Toprated /> */}
+      {/* <Products /> */}
+      {/* <Dealoftheday /> */}
       <Testimonial />
-      <FashionCards />
+      {/* <FashionCards /> */}
     </div>
   );
 };

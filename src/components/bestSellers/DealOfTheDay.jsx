@@ -13,29 +13,25 @@ const Dealoftheday = () => {
   return (
     <Container>
       <div
-      // style={{
-      //   display: "flex",
-      //   alignItems: "center",
-      //   justifyContent: "space-between",
-      //   flexDirection: "row",
-      //   gap: "25px",
-      //   flexWrap: "wrap",
-      // }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "row",
+          gap: "25px",
+          flexWrap: "wrap",
+          marginTop: "50px",
+          overflowX: "hidden",
+        }}
       >
-        <div
-          className="bestsellers"
-          style={{
-            paddingLeft: "0",
-            border: "1px solid rgb(255, 255, 255)",
-            width: "350px",
-          }}
-        >
+        <div className="bestsellers">
           <h3 className="bestsellers-title">Best Sellers</h3>
           <div className="bestsellers-content">
             {bestsellers.map((sale) => {
               return (
                 <div className="bestsellers-info" key={sale.id}>
-                  <img src={sale.image} alt="" width={"80px"} />
+                  <div className="bestsellers-img">
+                    <img src={sale.image} alt="" />
+                  </div>
                   <div>
                     <h4 className="subtitle">{sale.title}</h4>
                     <Rating
@@ -124,6 +120,7 @@ const Dealoftheday = () => {
                         style={{
                           fontSize: "14px",
                           fontWeight: "bold",
+                          width: "100%",
                         }}
                       >
                         {deal.title}
@@ -132,6 +129,7 @@ const Dealoftheday = () => {
                         style={{
                           color: "#777",
                           fontSize: "17px",
+                          width: "100%",
                         }}
                       >
                         Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
@@ -171,7 +169,7 @@ const Dealoftheday = () => {
                           style={{
                             display: "flex",
                             alignItems: "center",
-                            gap: "0px",
+
                             marginTop: "10px",
                             justifyContent: "space-between",
                             paddingRight: "50px",
