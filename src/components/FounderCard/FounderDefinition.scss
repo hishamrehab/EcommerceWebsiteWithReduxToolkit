@@ -57,3 +57,9 @@
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .founder-definition {
+    margin-left: 0;
+  }
+}

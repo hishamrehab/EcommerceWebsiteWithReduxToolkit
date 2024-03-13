@@ -1,6 +1,7 @@
 import React from "react";
 import { trending } from "../../data";
 import { Container } from "react-bootstrap";
+
 const TrendingProducts = () => {
   return (
     <Container>

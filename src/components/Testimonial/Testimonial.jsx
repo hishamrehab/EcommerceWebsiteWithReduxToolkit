@@ -1,7 +1,7 @@
 import React from "react";
-import FounderDefinition from "./FounderDefinition";
-import Discount from "./Discount";
-import OurServises from "./OurServises";
+import FounderDefinition from "../../components/FounderCard/FounderDefinition";
+import Discount from "../../components/DiscountCard/Discount";
+import OurServises from "../../components/Services/OurServises";
 import { Container } from "react-bootstrap";
 
 const Testimonial = () => {
@@ -16,6 +16,7 @@ const Testimonial = () => {
           flexDirection: "row",
           marginBottom: "60px",
           justifyContent: "space-between",
+          marginTop: "50px",
         }}
       >
         <div className="founder-part">
@@ -24,7 +25,7 @@ const Testimonial = () => {
         <div className="discount-part">
           <Discount />
         </div>
-        <div className="services-part" >
+        <div className="services-part">
           <OurServises />
         </div>
       </div>
