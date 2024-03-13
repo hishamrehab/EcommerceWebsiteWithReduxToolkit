@@ -1,5 +1,5 @@
 .my-swipper {
-  width: 70%;
+  width: 60%;
 }
 
 .swiper {
@@ -36,13 +36,14 @@
 @media only screen and (max-width: 600px) {
   .my-swipper {
     width: 50%;
-    height: 600px;
+    height: 800px;
   }
 
   .swiper {
     width: 100%;
-    height: 600px;
+    height: 800px;
     cursor: grab;
+    /* background-color: red; */
   }
 
   .swiper-slide {
@@ -52,7 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 800px;
   }
 
   .swiper-slide img {
@@ -62,14 +63,106 @@
   }
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .my-swipper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 500px;
+    cursor: grab;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    margin-left: 30px;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 80px;
+  }
+  .bestsellers-info {
+    margin-left: 80px;
+    img {
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: var(--fs-5);
+    }
+    .rating {
+      font-size: 5px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (max-width: 600px) {
+  .my-swipper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 650px;
+    cursor: grab;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    margin-left: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 80px;
+  }
+  .bestsellers-info {
+    margin-left: 80px;
+    img {
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: var(--fs-5);
+    }
+    .rating {
+      font-size: 5px;
+    }
+  }
+}
+
 /* best sellers section */
+
 .bestsellers {
-  margin-bottom: 15px;
-  padding: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border: 1px solid rgb(112, 110, 110);
 
   .bestsellers-title {
     font-size: var(--fs-3);
-    margin-left: 20px;
+    margin-left: 10px;
     margin-bottom: 20px;
     margin-top: 10px;
   }
@@ -81,7 +174,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 20px;
+      min-width: 300px;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 10px;
       img {
         margin-bottom: 10px;
       }
@@ -181,51 +279,6 @@
           color: var(--spanish-gray);
         }
       }
-    }
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  .my-swipper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper {
-    width: 100%;
-    height: 500px;
-    cursor: grab;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    margin-left: 30px;
-
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    width: 100%;
-    height: 100px;
-    object-fit: contain;
-    margin-right: 80px;
-  }
-  .bestsellers-info {
-    margin-left: 80px;
-    img {
-      margin-bottom: 10px;
-    }
-    .subtitle {
-      font-size: var(--fs-5);
-    }
-    .rating {
-      font-size: 5px;
     }
   }
 }

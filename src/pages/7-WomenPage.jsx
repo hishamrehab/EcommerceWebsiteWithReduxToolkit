@@ -12,10 +12,9 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { Container } from "react-bootstrap";
-import Product from "../components/3-main/Product";
+import Product from "../components/main/Product";
 
 const WomenPage = () => {
-
   const dispatch = useDispatch();
   const showButton = true;
   const [products, setProducts] = useState([]);

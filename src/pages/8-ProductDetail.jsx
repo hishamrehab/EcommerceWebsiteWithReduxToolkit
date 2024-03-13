@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import Product from "../components/3-main/Product";
+import Product from "../components/main/Product";
 import { Box, Container, Stack } from "@mui/material";
 
 import Card from "@mui/material/Card";
@@ -14,7 +14,7 @@ import { addToCart } from "../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
-import "./productDetails.css";
+
 const ProductDetail = () => {
   const [product, setProduct] = useState({});
   const [value, setValue] = useState(2);

@@ -1,22 +1,21 @@
 import React from "react";
-import "./faturedproducts.scss";
-import { arrivals } from "../../data";
+import { trending } from "../../data";
 import { Container } from "react-bootstrap";
-const NewArrivals = () => {
+const TrendingProducts = () => {
   return (
     <Container>
       <div className="product-minimal">
         <div className="product-showcase">
-          <h2 className="title">New Arrivals</h2>
+          <h2 className="title">Trending</h2>
         </div>
         <div className="showcase-wrapper has-scrollbar">
           <div className="showcase-container">
-            {arrivals.map((arrival) => {
+            {trending.map((trend) => {
               return (
-                <div className="showcase" key={arrival.id}>
+                <div className="showcase" key={trend.id}>
                   <a href="#" className="showcase-img-box">
                     <img
-                      src={arrival.image}
+                      src={trend.image}
                       width={"70px"}
                       className="showcase-img"
                     />
@@ -24,14 +23,14 @@ const NewArrivals = () => {
 
                   <div className="showcase-content">
                     <a href="#">
-                      <h4 className="showcase-title">{arrival.title}</h4>
+                      <h4 className="showcase-title">{trend.title}</h4>
                     </a>
                     <a href="" className="showcase-category">
-                      {arrival.subtitle}
+                      {trend.subtitle}
                     </a>
                     <div className="price">
-                      <span>${arrival.price}</span>
-                      <del>${arrival.deletedPrice}</del>
+                      <span>${trend.price}</span>
+                      <del>${trend.deletedPrice}</del>
                     </div>
                   </div>
                 </div>
@@ -44,4 +43,4 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default TrendingProducts;

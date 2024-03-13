@@ -7,7 +7,7 @@ const fixedTimar = ({ time, name }) => {
       <div
         style={{
           backgroundColor: "hsl(0, 0%, 60%)",
-          width: "40px",
+          width: "35px",
           borderRadius: "5px",
           marginLeft: {
             xs: "25px",
@@ -17,7 +17,7 @@ const fixedTimar = ({ time, name }) => {
           marginBottom: "15px",
           paddingBottom: "20px",
           height: "50px",
-          marginRight: "5px",
+          // marginRight: "20px",
         }}
       >
         <p>{time}</p>

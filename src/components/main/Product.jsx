@@ -21,18 +21,19 @@ export const Product = ({ product, showButton }) => {
     <Container>
       <Stack>
         <Card
+          className="product-card"
           sx={{
             boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
-            maxWidth: { md: "320px", sm: "250px", xs: "100%" },
+            maxWidth: { md: "305px", sm: "320px", xs: "100%" },
             height: {
-              md: "800px",
-              sm: "830px",
-              xs: "900px",
+              md: "860px",
+              sm: "800px",
+              xs: "920px",
             },
+
             marginBottom: "50px",
             paddingBottom: "20px",
             border: "1px solid #777",
-            marginRight: "20px",
           }}
         >
           <CardContent>
@@ -49,7 +50,7 @@ export const Product = ({ product, showButton }) => {
                 marginBottom: "15px",
               }}
             >
-              {product.title.slice(0, 50)}
+              {product.title.slice(0, 40)}
             </Typography>
 
             <Typography
@@ -105,7 +106,6 @@ export const Product = ({ product, showButton }) => {
                 marginLeft: "50px",
                 fontSize: "25px",
                 display: "flex",
-
                 gap: "25px",
                 textAlign: "center",
               }}
@@ -173,8 +173,10 @@ export const Product = ({ product, showButton }) => {
                   color: "#FFF",
                   backgroundColor: "#000",
                   fontSize: "12px",
-                  marginLeft: "30px",
+                  marginLeft: "20px",
+                  marginRight: "5px",
                   padding: "10px",
+                  width: "120px",
                   hover: {
                     "&:hover": {
                       backgroundColor: "#000",
@@ -183,7 +185,6 @@ export const Product = ({ product, showButton }) => {
                   },
                 }}
               >
-                {" "}
                 Add TO Cart
               </span>
             </Button>
@@ -193,7 +194,7 @@ export const Product = ({ product, showButton }) => {
                 style={{
                   textDecoration: "none",
                   fontSize: "18px",
-                  marginLeft: "30px",
+                  // marginLeft: "30px",
                 }}
                 to={`/product/${product.id}`}
               >
@@ -202,8 +203,8 @@ export const Product = ({ product, showButton }) => {
                     color: "#000",
                     backgroundColor: "#EBF400",
                     padding: "8px",
-
-                    width: "70px",
+                    marginRight: "15px",
+                    width: "80px",
                   }}
                   onClick={{
                     scrollY,

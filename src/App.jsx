@@ -3,7 +3,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./pages/cartpage/CartPage";
 
-import HomePage from "./pages/1-HomePAGE.JSX";
+import HomePage from "./pages/HomePage.jsx";
 import { useDispatch } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import JeweleryPage from "./pages/4-JeweleryPage";
@@ -14,8 +14,8 @@ import Footer from "./components/4-Footer/Footer";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import ProductDetail from "./pages/8-ProductDetail";
 import AllProducts from "./pages/2-AllProducts";
-import Navbar from "./components/1-navbar/Navbar";
-import SecondNavbar from "./components/1-navbar/SecondNavbar";
+import Navbar from "./components/Navbar/Navbar";
+import SecondNavbar from "./components/Navbar/SecondNavbar";
 import { Container } from "react-bootstrap";
 function App() {
   return (

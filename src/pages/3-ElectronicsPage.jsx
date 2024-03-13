@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { ToggleButtonGroup } from "@mui/material";
 
-
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -15,11 +14,10 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { Container } from "react-bootstrap";
-import Product from "../components/3-main/Product";
+import Product from "../components/main/Product";
 
 const ElectronicsPage = () => {
   const dispatch = useDispatch();
-
 
   const showButton = true;
   const [products, setProducts] = useState([]);

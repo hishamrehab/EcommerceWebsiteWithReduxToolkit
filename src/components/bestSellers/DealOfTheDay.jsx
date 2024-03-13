@@ -13,22 +13,29 @@ const Dealoftheday = () => {
   return (
     <Container>
       <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: "20px",
-          flexWrap: "wrap",
-          padding: "0 10px",
-        }}
+      // style={{
+      //   display: "flex",
+      //   alignItems: "center",
+      //   justifyContent: "space-between",
+      //   flexDirection: "row",
+      //   gap: "25px",
+      //   flexWrap: "wrap",
+      // }}
       >
-        <div className="bestsellers">
+        <div
+          className="bestsellers"
+          style={{
+            paddingLeft: "0",
+            border: "1px solid rgb(255, 255, 255)",
+            width: "350px",
+          }}
+        >
           <h3 className="bestsellers-title">Best Sellers</h3>
           <div className="bestsellers-content">
             {bestsellers.map((sale) => {
               return (
                 <div className="bestsellers-info" key={sale.id}>
-                  <img src={sale.image} alt="" width={"100px"} />
+                  <img src={sale.image} alt="" width={"80px"} />
                   <div>
                     <h4 className="subtitle">{sale.title}</h4>
                     <Rating
@@ -68,6 +75,7 @@ const Dealoftheday = () => {
             style={{
               borderRadius: "10px",
               marginBottom: "50px",
+              paddingBottom: "20px",
               border: "1px solid hsl(0, 0%, 93%)",
               height: {
                 xs: "1500px",
@@ -84,16 +92,18 @@ const Dealoftheday = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "space-between",
-                      gap: "20px",
+                      gap: "25px",
                       flexWrap: "wrap",
                     }}
                   >
-                    <img src={deal.image} />
+                    <div>
+                      <img src={deal.image} />
+                    </div>
 
                     <div
                       className="swiperSlide-info"
                       style={{
-                        maxWidth: "60%",
+                        maxWidth: "50%",
                         paddingRight: "15px",
                         width: {
                           xs: "100%",

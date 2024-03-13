@@ -5,6 +5,7 @@
   padding-right: 40px;
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-top: 50px;
 
   .brand-directory {
     .brand-title {
@@ -65,7 +66,6 @@
       flex-wrap: wrap;
 
       padding-top: 15px;
-   
 
       .contactUs {
         padding-top: 0;
@@ -84,7 +84,7 @@
         .copyright {
           font-size: 20px;
           text-align: center;
-         
+
           padding-right: 15px;
           width: 100%;
         }
@@ -92,4 +92,11 @@
     }
   }
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .footer-img {
+    width: 250px;
+  }
+}
+
 /* ./Footer */

@@ -1,5 +1,5 @@
 import React from "react";
-import "./faturedproducts.scss";
+import "./TopRated.scss";
 import { rating } from "../../data";
 import { Container } from "react-bootstrap";
 const Toprated = () => {
@@ -14,19 +14,15 @@ const Toprated = () => {
             {rating.map((rate) => {
               return (
                 <div className="showcase" key={rate.id}>
-                  <a href="#" className="showcase-img-box">
-                    <img
-                      src={rate.image}
-                      width={"70px"}
-                      className="showcase-img"
-                    />
-                  </a>
+                  <div href="#" className="showcase-img-box">
+                    <img src={rate.image} className="showcase-img" />
+                  </div>
 
                   <div className="showcase-content">
                     <a href="#">
                       <h4 className="showcase-title">{rate.title}</h4>
                     </a>
-                    <a href="" className="showcase-category">
+                    <a href="#" className="showcase-category">
                       {rate.subtitle}
                     </a>
                     <div className="price">
@@ -40,9 +36,7 @@ const Toprated = () => {
           </div>
         </div>
       </div>
-   
     </Container>
-    
   );
 };
 

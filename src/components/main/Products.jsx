@@ -60,7 +60,6 @@ function Products() {
         <div
           className="products-btns"
           style={{
-            // minWidth: "25px",
             display: "flex",
             flexWrap: "wrap",
             alignItems: "center",
@@ -82,6 +81,7 @@ function Products() {
                 sm: "20px",
                 xs: "20px",
               },
+              textTransform: "uppercase",
             }}
             onClick={() => {
               getProducts();
@@ -109,6 +109,7 @@ function Products() {
                   textAlign: "center",
                   padding: "7px",
                   paddingLeft: "50px",
+                  textTransform: "capitalize",
                 }}
                 key={cat}
                 variant="outlined"
@@ -131,21 +132,11 @@ function Products() {
                 flexWrap: "wrap",
                 alignItems: "center",
                 justifyContent: "space-between",
+                gap: "20px",
               }}
             >
               {products.map((product) => (
-                <Box
-                  key={product.id}
-                  sx={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyItems: "flex-start",
-                    flexWrap: "wrap",
-                    marginRight: "auto",
-                    marginLeft: "auto",
-                  }}
-                >
+                <Box key={product.id}>
                   <>
                     <Product product={product} showButton={true} />
                   </>

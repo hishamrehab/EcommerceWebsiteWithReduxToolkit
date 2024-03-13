@@ -1,22 +1,21 @@
 import React from "react";
-import "./faturedproducts.scss";
-import { trending } from "../../data";
+import { arrivals } from "../../data";
 import { Container } from "react-bootstrap";
-const TrendingProducts = () => {
+const NewArrivals = () => {
   return (
     <Container>
       <div className="product-minimal">
         <div className="product-showcase">
-          <h2 className="title">Trending</h2>
+          <h2 className="title">New Arrivals</h2>
         </div>
         <div className="showcase-wrapper has-scrollbar">
           <div className="showcase-container">
-            {trending.map((trend) => {
+            {arrivals.map((arrival) => {
               return (
-                <div className="showcase" key={trend.id}>
+                <div className="showcase" key={arrival.id}>
                   <a href="#" className="showcase-img-box">
                     <img
-                      src={trend.image}
+                      src={arrival.image}
                       width={"70px"}
                       className="showcase-img"
                     />
@@ -24,14 +23,14 @@ const TrendingProducts = () => {
 
                   <div className="showcase-content">
                     <a href="#">
-                      <h4 className="showcase-title">{trend.title}</h4>
+                      <h4 className="showcase-title">{arrival.title}</h4>
                     </a>
                     <a href="" className="showcase-category">
-                      {trend.subtitle}
+                      {arrival.subtitle}
                     </a>
                     <div className="price">
-                      <span>${trend.price}</span>
-                      <del>${trend.deletedPrice}</del>
+                      <span>${arrival.price}</span>
+                      <del>${arrival.deletedPrice}</del>
                     </div>
                   </div>
                 </div>
@@ -44,4 +43,4 @@ const TrendingProducts = () => {
   );
 };
 
-export default TrendingProducts;
+export default NewArrivals;
