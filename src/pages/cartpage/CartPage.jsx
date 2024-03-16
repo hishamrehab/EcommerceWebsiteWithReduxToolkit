@@ -90,7 +90,7 @@ export default function Cart() {
                 );
               })
             ) : (
-              <h2>No Products In Your Cart</h2>
+              <h2 className="cart-products">No Products In Your Cart</h2>
             )}
             {products.length > 0 && (
               <button

@@ -69,7 +69,6 @@ function Navbar() {
           <Link to="/">
             <img src={logo} width={"120px"} />
           </Link>{" "}
-          *
           <Box
             sx={{
               color: "#000",
@@ -98,17 +97,17 @@ function Navbar() {
             </IconButton>
 
             <Menu
-              id="menu-appbar"
+              // id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
+              // anchorOrigin={{
+              //   vertical: "bottom",
+              //   horizontal: "left",
+              // }}
+              // keepMounted
+              // transformOrigin={{
+              //   vertical: "top",
+              //   horizontal: "left",
+              // }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
@@ -120,27 +119,91 @@ function Navbar() {
                   className="me-auto"
                   style={{
                     color: "#000",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: "15px",
+                    width: "100%",
+                    backgroundColor: "none",
                   }}
                 >
-                  <Link to="/products" className="text-dark">
+                  <Button
+                    href="/products"
+                    sx={{
+                      color: "#000",
+                      fontSize: "19px",
+                      width: "100%",
+                      display: "block",
+                      borderBottom: "1px solid #777",
+                      textAlign: "center",
+                    }}
+                  >
                     All Products
-                  </Link>
-                  <Link to="/electronics" className="text-dark">
+                  </Button>
+
+                  <Button
+                    href="/electronics"
+                    sx={{
+                      color: "#000",
+                      fontSize: "19px",
+                      width: "100%",
+                      display: "block",
+                      borderBottom: "1px solid #777",
+                      textAlign: "center",
+                      "&:hover": {
+                        color: "#777",
+                      },
+                    }}
+                  >
                     electronics
-                  </Link>
-                  <Link to="jewelery" className="text-dark">
+                  </Button>
+
+                  <Button
+                    href="jewelery"
+                    sx={{
+                      color: "#000",
+                      fontSize: "19px",
+                      width: "100%",
+                      display: "block",
+                      borderBottom: "1px solid #777",
+                      textAlign: "center",
+                      "&:hover": {
+                        color: "#777",
+                      },
+                    }}
+                  >
                     jewelery
-                  </Link>
-                  <Link to="men" className="text-dark">
+                  </Button>
+
+                  <Button
+                    href="men"
+                    sx={{
+                      color: "#000",
+                      fontSize: "19px",
+                      width: "100%",
+                      display: "block",
+                      borderBottom: "1px solid #777",
+                      textAlign: "center",
+                      "&:hover": {
+                        color: "#777",
+                      },
+                    }}
+                  >
                     men's clothing
-                  </Link>
-                  <Link to="women" className="text-dark">
+                  </Button>
+
+                  <Button
+                    href="women"
+                    sx={{
+                      color: "#000",
+                      fontSize: "19px",
+                      width: "100%",
+                      display: "block",
+
+                      textAlign: "center",
+                      "&:hover": {
+                        color: "#777",
+                      },
+                    }}
+                  >
                     women's clothing
-                  </Link>
+                  </Button>
                 </Nav>
               </MenuItem>
             </Menu>

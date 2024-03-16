@@ -101,6 +101,11 @@
 
     .swiper-slide {
       position: relative;
+
+      width: 100%;
+      margin: auto;
+      margin-left: 25px;
+
       .banner-img {
       }
       .banner-content {
@@ -126,6 +131,19 @@
           margin-bottom: 15px;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mySwiper {
+    width: 100%;
+
+    .swiper-slide {
+      position: relative;
+
+      width: 100%;
+      margin-left: 15px;
     }
   }
 }
