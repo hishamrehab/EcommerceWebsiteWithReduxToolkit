@@ -133,6 +133,8 @@ function Products() {
                 alignItems: "center",
                 justifyContent: "space-between",
                 gap: "20px",
+                marginRight: "auto",
+                marginLeft: "auto",
               }}
             >
               {products.map((product) => (

@@ -39,7 +39,7 @@ const DropdownMenu = ({ category }) => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                gap: "35px",
+                gap: "10px",
               }}
             >
               <Box
@@ -64,6 +64,7 @@ const DropdownMenu = ({ category }) => {
           </ListItemButton>
         </List>
 
+
         <Menu
           id="lock-menu"
           anchorEl={anchorEl}
@@ -81,10 +82,10 @@ const DropdownMenu = ({ category }) => {
           <MenuItem
             onClick={handleClose}
             sx={{
-              width: "250px",
+              width: "220px",
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-between",
+              // justifyContent: "space-between",
             }}
           >
             <Typography>{category.item1}</Typography>
@@ -155,6 +156,8 @@ const DropdownMenu = ({ category }) => {
             </Typography>
           </MenuItem>
         </Menu>
+
+
       </div>
     </Container>
   );
