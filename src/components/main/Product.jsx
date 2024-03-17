@@ -35,7 +35,7 @@ export const Product = ({ product, showButton }) => {
           paddingBottom: "20px",
           border: "1px solid #777",
           marginRight: "auto",
-          marginLeft:"auto"
+          marginLeft:"20px"
           
         }}
       >
