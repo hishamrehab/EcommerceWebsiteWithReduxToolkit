@@ -39,7 +39,7 @@ const DropdownMenu = ({ category }) => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                gap: "50px",
+                gap: "35px",
               }}
             >
               <Box
