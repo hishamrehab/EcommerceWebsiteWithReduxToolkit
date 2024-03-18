@@ -111,7 +111,7 @@ function Navbar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "block", sm: "block", md: "none" },
               }}
             >
               <MenuItem onClick={handleCloseNavMenu}>
@@ -210,7 +210,7 @@ function Navbar() {
           </Box>
           <Box
             sx={{
-              display: { xs: "none", md: "flex" },
+              display: { xs: "none", sm: "none", md: "flex" },
               fontSize: "25px",
             }}
           >

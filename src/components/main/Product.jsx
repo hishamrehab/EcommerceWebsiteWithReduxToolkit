@@ -23,10 +23,10 @@ export const Product = ({ product, showButton }) => {
         className="product-card"
         sx={{
           boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
-          maxWidth: { md: "305px", sm: "300px", xs: "300px" },
+          maxWidth: { md: "305px", sm: "100%", xs: "100%" },
           height: {
             md: "860px",
-            sm: "820px",
+            sm: "920px",
             xs: "880px",
           },
           overflowX: "hidden",
@@ -35,7 +35,7 @@ export const Product = ({ product, showButton }) => {
           paddingBottom: "20px",
           border: "1px solid #777",
           marginRight: "auto",
-          marginLeft:"20px"
+          marginLeft:"15px"
           
         }}
       >
