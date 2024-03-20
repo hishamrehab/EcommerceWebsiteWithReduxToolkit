@@ -94,7 +94,7 @@ function Products() {
               <button
                 style={{
                   fontSize: "17px",
-                  width:"200px",
+                  width: "200px" ,
                   color: "#fff",
                   backgroundColor: "hsl(353, 100%, 78%)",
                   borderRadius: "5px",
