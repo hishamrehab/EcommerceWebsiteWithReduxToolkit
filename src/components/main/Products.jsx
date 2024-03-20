@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Product from "./Product";
 import { Box, Container, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
- import "./ProductSection.css";
+import "./ProductSection.css";
 
 function Products() {
   const api_url = "https://fakestoreapi.com/products";
@@ -65,7 +65,6 @@ function Products() {
             alignItems: "center",
             justifyContent: "space-between",
             gap: "20px",
-            minWidth: "150px",
           }}
         >
           <button
@@ -73,7 +72,7 @@ function Products() {
             style={{
               padding: "7px",
               fontSize: "17px",
-              width: {md:"200px" , xs:"100%"},
+              width: "200px",
               color: "#fff",
               backgroundColor: "hsl(353, 100%, 78%)",
               borderRadius: "5px",
@@ -95,7 +94,7 @@ function Products() {
               <button
                 style={{
                   fontSize: "17px",
-                   width: {md:"200px" , xs:"100%"},
+                  width:"200px",
                   color: "#fff",
                   backgroundColor: "hsl(353, 100%, 78%)",
                   borderRadius: "5px",
