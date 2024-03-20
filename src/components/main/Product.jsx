@@ -11,7 +11,7 @@ import { addToCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
-import "./ProductSection.css";
+// import "./ProductSection.css";
 export const Product = ({ product, showButton }) => {
   const [value, setValue] = useState(2);
   const [quantity, setQuantity] = useState(1);
@@ -23,20 +23,13 @@ export const Product = ({ product, showButton }) => {
         className="product-card"
         sx={{
           boxShadow: "10px 10px 2px 1px rgba(0, 0, 250,.1)",
-          maxWidth: { md: "305px", sm: "100%", xs: "100%" },
-          height: {
-            md: "860px",
-            sm: "920px",
-            xs: "880px",
-          },
-          overflowX: "hidden",
-          overflowY: "hidden",
+          width: { md: "305px" , sm:"80%" , xs:"100%"},
+          height: "auto",
           marginBottom: "50px",
           paddingBottom: "20px",
           border: "1px solid #777",
-          marginRight: "auto",
-          marginLeft:"15px"
-          
+           marginRight: "auto",
+           marginLeft: "auto",
         }}
       >
         <CardContent>
@@ -151,6 +144,7 @@ export const Product = ({ product, showButton }) => {
             paddingBottom: "30px",
             display: "flex",
             alignItems: "baseline",
+            marginLeft: "5px",
           }}
         >
           <Button
@@ -173,6 +167,7 @@ export const Product = ({ product, showButton }) => {
               style={{
                 color: "#FFF",
                 backgroundColor: "#000",
+                borderRadius: "10px",
                 fontSize: "12px",
                 marginLeft: "20px",
                 marginRight: "5px",
@@ -206,6 +201,8 @@ export const Product = ({ product, showButton }) => {
                   padding: "8px",
                   marginRight: "15px",
                   width: "80px",
+                  borderRadius: "10px",
+                  marginLeft: "20px",
                 }}
                 onClick={{
                   scrollY,
